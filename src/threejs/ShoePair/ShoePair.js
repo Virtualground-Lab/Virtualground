@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import { BakeShadows, OrbitControls, Stage, Suspense } from 'react';
-import { useGLTF } from '@react-three/drei';
+import { Suspense } from 'react';
+import { useGLTF, OrbitControls, BakeShadows, Stage} from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
 function Model({ color, ...props }) {

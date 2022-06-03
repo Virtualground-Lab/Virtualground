@@ -1,7 +1,5 @@
-
-import * as THREE from 'three';
-import React, { useEffect, useState, Suspense } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import React, { useEffect, useState } from 'react';
+import { Canvas } from '@react-three/fiber';
 import { useGLTF, useTexture, useAnimations, Stage } from '@react-three/drei';
 import { useSpring } from '@react-spring/three';
 
