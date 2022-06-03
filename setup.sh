@@ -1,7 +1,5 @@
-
-
 printf "Checking for required npm version...\n"
-npm install -g npm > /dev/null 2>&1
+yarn install -g yarn > /dev/null 2>&1
 printf "Completed.\n\n"
 
 set -eEo pipefail
