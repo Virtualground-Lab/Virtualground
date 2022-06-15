@@ -19,6 +19,7 @@ const NavItem = ({ items, colorInvert = false }) => {
           <Button
             component={'a'}
             href={p.href}
+            key={i}
             sx={{
               marginLeft: 4,
               justifyContent: 'flex-start',
@@ -58,8 +59,6 @@ const NavItem = ({ items, colorInvert = false }) => {
 };
 
 NavItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
   colorInvert: PropTypes.bool,
 };

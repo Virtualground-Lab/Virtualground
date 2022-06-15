@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 printf "Enabling Cloud Build APIs...\n"
 gcloud services enable cloudbuild.googleapis.com
 printf "Completed.\n\n"
@@ -14,3 +15,7 @@ printf "Completed.\n\n"
 printf "Please run the following command to find the IP address for the vgr service: kubectl get service vgr\n\n"
 
 printf "Deployment completed successfully!\n"
+=======
+printf "Deploying on firebase...\n"
+firebase deploy --only hosting
+>>>>>>> 37df9b2f200f04044e9ab272a5dbfb27b85676e2
