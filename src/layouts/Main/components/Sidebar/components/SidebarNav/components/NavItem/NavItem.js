@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-const NavItem = ({ title, items }) => {
+const NavItem = ({ items }) => {
   const theme = useTheme();
   const [activeLink, setActiveLink] = useState('');
   useEffect(() => {
@@ -64,7 +64,6 @@ const NavItem = ({ title, items }) => {
 
 NavItem.propTypes = {
   items: PropTypes.array.isRequired,
-  title: PropTypes.string.isRequired,
   onClose: PropTypes.func,
 };
 
