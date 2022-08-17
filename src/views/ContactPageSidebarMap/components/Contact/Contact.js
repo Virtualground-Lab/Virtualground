@@ -1,17 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemText from '@mui/material/ListItemText';
-import Avatar from '@mui/material/Avatar';
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemText from "@mui/material/ListItemText";
+import Avatar from "@mui/material/Avatar";
 
 const mock = [
   {
-    label: 'Phone',
-    value: '+39 659-657-0133',
+    label: "Phone",
+    value: "+39 659-657-0133",
     icon: (
       <svg
         width={20}
@@ -25,8 +25,8 @@ const mock = [
     ),
   },
   {
-    label: 'Email',
-    value: 'hi@maccarianagency.com',
+    label: "Email",
+    value: "hi@maccarianagency.com",
     icon: (
       <svg
         width={20}
@@ -41,8 +41,8 @@ const mock = [
     ),
   },
   {
-    label: 'Address',
-    value: 'Via Venini 33, 20147',
+    label: "Address",
+    value: "Via Venini 33, 20147",
     icon: (
       <svg
         width={20}
@@ -68,23 +68,23 @@ const Contact = () => {
     <Box>
       <Box marginBottom={2}>
         <Typography
-          variant={'h4'}
+          variant={"h4"}
           sx={{ fontWeight: 700 }}
           gutterBottom
-          align={'center'}
+          align={"center"}
         >
           Contact details
         </Typography>
-        <Typography color="text.secondary" align={'center'}>
+        <Typography color="text.secondary" align={"center"}>
           Keep track of what's happening with your data, change permissions, and
           run reports against your data anywhere in the world. Keep track of
           what's happening with your data, change permissions.
         </Typography>
       </Box>
       <Box
-        display={'flex'}
-        flexDirection={{ xs: 'column', md: 'row' }}
-        justifyContent={'space-between'}
+        display={"flex"}
+        flexDirection={{ xs: "column", md: "row" }}
+        justifyContent={"space-between"}
         marginBottom={4}
       >
         {mock.map((item, i) => (
@@ -92,12 +92,12 @@ const Contact = () => {
             key={i}
             component={ListItem}
             disableGutters
-            width={'auto'}
+            width={"auto"}
             padding={0}
           >
             <Box
               component={ListItemAvatar}
-              minWidth={'auto !important'}
+              minWidth={"auto !important"}
               marginRight={2}
             >
               <Box

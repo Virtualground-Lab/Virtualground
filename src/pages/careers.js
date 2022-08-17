@@ -1,5 +1,5 @@
-import React from 'react';
-import Careers from 'views/Careers';
+import React from "react";
+import Careers from "views/Careers";
 
 const CareerListingPage = () => {
   return <Careers />;

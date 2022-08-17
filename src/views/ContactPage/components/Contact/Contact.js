@@ -1,19 +1,19 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemText from '@mui/material/ListItemText';
-import Avatar from '@mui/material/Avatar';
-import { useTheme } from '@mui/material/styles';
+import React from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemText from "@mui/material/ListItemText";
+import Avatar from "@mui/material/Avatar";
+import { useTheme } from "@mui/material/styles";
 
-import Container from 'components/Container';
+import Container from "components/Container";
 
 const mock = [
   {
-    label: 'Phone',
-    value: '+39 659-657-0133',
+    label: "Phone",
+    value: "+39 659-657-0133",
     icon: (
       <svg
         width={20}
@@ -27,8 +27,8 @@ const mock = [
     ),
   },
   {
-    label: 'Email',
-    value: 'hi@maccarianagency.com',
+    label: "Email",
+    value: "hi@maccarianagency.com",
     icon: (
       <svg
         width={20}
@@ -43,8 +43,8 @@ const mock = [
     ),
   },
   {
-    label: 'Address',
-    value: 'Via Venini 33, 20147',
+    label: "Address",
+    value: "Via Venini 33, 20147",
     icon: (
       <svg
         width={20}
@@ -70,7 +70,7 @@ const Contact = () => {
     return (
       <Box>
         <Box marginBottom={2}>
-          <Typography variant={'h4'} sx={{ fontWeight: 700 }} gutterBottom>
+          <Typography variant={"h4"} sx={{ fontWeight: 700 }} gutterBottom>
             Contact details
           </Typography>
           <Typography color="text.secondary">
@@ -80,21 +80,21 @@ const Contact = () => {
           </Typography>
         </Box>
         <Box
-          display={'flex'}
-          flexDirection={'column'}
-          justifyContent={'space-between'}
+          display={"flex"}
+          flexDirection={"column"}
+          justifyContent={"space-between"}
         >
           {mock.map((item, i) => (
             <Box
               key={i}
               component={ListItem}
               disableGutters
-              width={'auto'}
+              width={"auto"}
               padding={0}
             >
               <Box
                 component={ListItemAvatar}
-                minWidth={'auto !important'}
+                minWidth={"auto !important"}
                 marginRight={2}
               >
                 <Box
@@ -128,9 +128,9 @@ const Contact = () => {
         style={{
           minHeight: 300,
           filter:
-            theme.palette.mode === 'dark'
-              ? 'grayscale(0.5) opacity(0.7)'
-              : 'none',
+            theme.palette.mode === "dark"
+              ? "grayscale(0.5) opacity(0.7)"
+              : "none",
         }}
       />
     );
@@ -141,18 +141,18 @@ const Contact = () => {
       sx={{
         width: 1,
         height: 1,
-        overflow: 'hidden',
+        overflow: "hidden",
       }}
     >
       <Container paddingX={0} paddingY={0} maxWidth={{ sm: 1, md: 1236 }}>
         <Box
-          display={'flex'}
-          flexDirection={{ xs: 'column', md: 'row' }}
-          position={'relative'}
+          display={"flex"}
+          flexDirection={{ xs: "column", md: "row" }}
+          position={"relative"}
         >
           <Box
-            display={'flex'}
-            alignItems={'center'}
+            display={"flex"}
+            alignItems={"center"}
             width={1}
             order={{ xs: 2, md: 1 }}
           >
@@ -162,34 +162,34 @@ const Contact = () => {
           </Box>
           <Box
             sx={{
-              flex: { xs: '0 0 100%', md: '0 0 50%' },
-              position: 'relative',
-              maxWidth: { xs: '100%', md: '50%' },
+              flex: { xs: "0 0 100%", md: "0 0 50%" },
+              position: "relative",
+              maxWidth: { xs: "100%", md: "50%" },
               minHeight: { xs: 300, md: 600 },
               order: { xs: 1, md: 2 },
             }}
           >
             <Box
               sx={{
-                width: { xs: 1, md: '50vw' },
-                height: '100%',
-                position: 'relative',
+                width: { xs: 1, md: "50vw" },
+                height: "100%",
+                position: "relative",
               }}
             >
               <Box
                 sx={{
-                  width: '100%',
-                  height: '100%',
-                  overflow: 'hidden',
+                  width: "100%",
+                  height: "100%",
+                  overflow: "hidden",
                 }}
               >
                 <Box
                   sx={{
-                    overflow: 'hidden',
-                    left: '0%',
+                    overflow: "hidden",
+                    left: "0%",
                     width: 1,
                     height: 1,
-                    position: { xs: 'relative', md: 'absolute' },
+                    position: { xs: "relative", md: "absolute" },
                   }}
                 >
                   <RightSide />

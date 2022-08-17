@@ -1,1 +1,1 @@
-export { default } from './BlogSearch';
+export { default } from "./BlogSearch";

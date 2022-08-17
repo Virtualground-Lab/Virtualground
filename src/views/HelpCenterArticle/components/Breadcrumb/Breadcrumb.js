@@ -1,22 +1,22 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
+import React from "react";
+import Box from "@mui/material/Box";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 
 const mock = [
   {
-    href: '#',
-    title: 'Help Center',
+    href: "#",
+    title: "Help Center",
     isActive: false,
   },
   {
-    href: '#',
-    title: 'Articles',
+    href: "#",
+    title: "Articles",
     isActive: false,
   },
   {
-    title: 'Account',
+    title: "Account",
     isActive: true,
   },
 ];
@@ -34,7 +34,7 @@ const Breadcrumb = () => {
                 href={item.href}
                 sx={{
                   fontWeight: 700,
-                  textDecoration: 'none',
+                  textDecoration: "none",
                 }}
               >
                 {item.title}

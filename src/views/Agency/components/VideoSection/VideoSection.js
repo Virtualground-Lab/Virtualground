@@ -1,37 +1,37 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Login from 'blocks/web3';
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Login from "blocks/web3";
 
 const VideoSection = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
   return (
     <Grid container spacing={4}>
-      <Grid item container alignItems={'center'} xs={12} md={6}>
-        <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
+      <Grid item container alignItems={"center"} xs={12} md={6}>
+        <Box data-aos={isMd ? "fade-right" : "fade-up"}>
           <Box marginBottom={2}>
-          <Typography
-            sx={{
-              textTransform: 'uppercase',
-              fontWeight: 'medium',
-            }}
-            gutterBottom
-            color={'secondary'}
-          >
-            Why?
-          </Typography>
             <Typography
-              color={'primary'}
-              component={'span'}
+              sx={{
+                textTransform: "uppercase",
+                fontWeight: "medium",
+              }}
+              gutterBottom
+              color={"secondary"}
+            >
+              Why?
+            </Typography>
+            <Typography
+              color={"primary"}
+              component={"span"}
               variant="h4"
               sx={{ fontWeight: 700 }}
             >
@@ -40,16 +40,16 @@ const VideoSection = () => {
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="text.secondary">
-              Our mission is to provide a decentralized virtual space where anyone 
-              can join and interact with each other. Each 3d environment is isolated 
-              with another and designed with better graphics, optimized for faster 
-              user interaction and loading time.
+              Our mission is to provide a decentralized virtual space where
+              anyone can join and interact with each other. Each 3d environment
+              is isolated with another and designed with better graphics,
+              optimized for faster user interaction and loading time.
             </Typography>
           </Box>
           <Box
             display="flex"
-            flexDirection={'column'}
-            justifyContent={'center'}
+            flexDirection={"column"}
+            justifyContent={"center"}
           >
             <Box marginBottom={2}>
               <Typography variant="body1" component="p">
@@ -57,23 +57,21 @@ const VideoSection = () => {
               </Typography>
             </Box>
             <Box
-              component={'form'}
+              component={"form"}
               noValidate
               autoComplete="off"
               sx={{
-                '& .MuiInputBase-input.MuiOutlinedInput-input': {
-                  bgcolor: 'background.paper',
+                "& .MuiInputBase-input.MuiOutlinedInput-input": {
+                  bgcolor: "background.paper",
                 },
               }}
             >
               <Box
                 display="flex"
-                flexDirection={{ xs: 'column', sm: 'row' }}
-                alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+                flexDirection={{ xs: "column", sm: "row" }}
+                alignItems={{ xs: "stretched", sm: "flex-start" }}
               >
-               <Login 
-                connectBtnName="Connect with wallet"
-               />
+                <Login connectBtnName="Connect with wallet" />
               </Box>
             </Box>
           </Box>
@@ -83,13 +81,13 @@ const VideoSection = () => {
         <Box
           height={1}
           width={1}
-          display={'flex'}
-          justifyContent={'center'}
-          alignItems={'center'}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
         >
           <Box height={1} width={1} maxHeight={600}>
             <Box
-              component={'iframe'}
+              component={"iframe"}
               title="video"
               width="100%"
               height="100%"

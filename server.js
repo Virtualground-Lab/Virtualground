@@ -31,19 +31,25 @@ app.get("/blog", (req, res) => {
 });
 
 app.get("/blog-articles", (req, res) => {
-  res.sendFile(path.join(__dirname, ".", "out", "blog-articles.html"), (err) => {
-    if (err) {
-      res.status(500).send(err);
+  res.sendFile(
+    path.join(__dirname, ".", "out", "blog-articles.html"),
+    (err) => {
+      if (err) {
+        res.status(500).send(err);
+      }
     }
-  });
+  );
 });
 
 app.get("/blog-reach-view", (req, res) => {
-  res.sendFile(path.join(__dirname, ".", "out", "blog-reach-view.html"), (err) => {
-    if (err) {
-      res.status(500).send(err);
+  res.sendFile(
+    path.join(__dirname, ".", "out", "blog-reach-view.html"),
+    (err) => {
+      if (err) {
+        res.status(500).send(err);
+      }
     }
-  });
+  );
 });
 
 app.get("/blog-search", (req, res) => {
@@ -71,11 +77,14 @@ app.get("/careers", (req, res) => {
 });
 
 app.get("/career-opening", (req, res) => {
-  res.sendFile(path.join(__dirname, ".", "out", "career-opening.html"), (err) => {
-    if (err) {
-      res.status(500).send(err);
+  res.sendFile(
+    path.join(__dirname, ".", "out", "career-opening.html"),
+    (err) => {
+      if (err) {
+        res.status(500).send(err);
+      }
     }
-  });
+  );
 });
 
 app.get("/faq", (req, res) => {
@@ -111,11 +120,14 @@ app.get("/help-center", (req, res) => {
 });
 
 app.get("/help-center-article", (req, res) => {
-  res.sendFile(path.join(__dirname, ".", "out", "help-center-article.html"), (err) => {
-    if (err) {
-      res.status(500).send(err);
+  res.sendFile(
+    path.join(__dirname, ".", "out", "help-center-article.html"),
+    (err) => {
+      if (err) {
+        res.status(500).send(err);
+      }
     }
-  });
+  );
 });
 
 app.get("/contact-page", (req, res) => {
@@ -143,11 +155,14 @@ app.get("/not-found", (req, res) => {
 });
 
 app.get("/not-found-cover", (req, res) => {
-  res.sendFile(path.join(__dirname, ".", "out", "not-found-cover.html"), (err) => {
-    if (err) {
-      res.status(500).send(err);
+  res.sendFile(
+    path.join(__dirname, ".", "out", "not-found-cover.html"),
+    (err) => {
+      if (err) {
+        res.status(500).send(err);
+      }
     }
-  });
+  );
 });
 //Start the server
 app.listen(port, () => console.log(`Virtualground listening on port ${port}!`));

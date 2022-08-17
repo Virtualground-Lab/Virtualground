@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import { alpha, useTheme } from '@mui/material/styles';
-import Card from '@mui/material/Card';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
-import InputAdornment from '@mui/material/InputAdornment';
+import React from "react";
+import { alpha, useTheme } from "@mui/material/styles";
+import Card from "@mui/material/Card";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import InputAdornment from "@mui/material/InputAdornment";
 
-import Container from 'components/Container';
+import Container from "components/Container";
 
 const Hero = () => {
   const theme = useTheme();
@@ -16,30 +16,30 @@ const Hero = () => {
   return (
     <Box
       minHeight={{ xs: 300, sm: 600 }}
-      position={'relative'}
+      position={"relative"}
       sx={{
         backgroundColor: theme.palette.alternate.main,
         background:
-          'url(https://assets.maccarianagency.com/backgrounds/img52.jpg) no-repeat center',
-        backgroundSize: 'cover',
+          "url(https://assets.maccarianagency.com/backgrounds/img52.jpg) no-repeat center",
+        backgroundSize: "cover",
         marginTop: -12,
         paddingTop: 12,
       }}
     >
       <Box
         sx={{
-          position: 'absolute',
+          position: "absolute",
           top: 0,
           left: 0,
           right: 0,
           bottom: 0,
           width: 1,
           height: 1,
-          background: alpha('#161c2d', 0.4),
+          background: alpha("#161c2d", 0.4),
           zIndex: 1,
         }}
       />
-      <Container position={'relative'} zIndex={2}>
+      <Container position={"relative"} zIndex={2}>
         <Box>
           <Box marginBottom={4} data-aos="fade-up">
             <Typography
@@ -47,7 +47,7 @@ const Hero = () => {
               gutterBottom
               sx={{
                 fontWeight: 900,
-                color: 'common.white',
+                color: "common.white",
               }}
             >
               What do you need?
@@ -58,7 +58,7 @@ const Hero = () => {
               color="text.primary"
               sx={{
                 fontWeight: 400,
-                color: 'common.white',
+                color: "common.white",
               }}
             >
               We are founded by a leading academic and researcher in the field
@@ -73,7 +73,7 @@ const Hero = () => {
             data-aos="fade-up"
           >
             <form noValidate autoComplete="off">
-              <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }}>
+              <Box display="flex" flexDirection={{ xs: "column", md: "row" }}>
                 <Box
                   width={1}
                   marginRight={{ xs: 0, md: 2 }}
@@ -91,14 +91,14 @@ const Hero = () => {
                       startAdornment: (
                         <InputAdornment position="start">
                           <Box
-                            component={'svg'}
+                            component={"svg"}
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
                             width={24}
                             height={24}
-                            color={'primary.main'}
+                            color={"primary.main"}
                           >
                             <path
                               strokeLinecap="round"
@@ -114,7 +114,7 @@ const Hero = () => {
                 </Box>
                 <Box>
                   <Button
-                    sx={{ height: 54, whiteSpace: 'nowrap' }}
+                    sx={{ height: 54, whiteSpace: "nowrap" }}
                     variant="contained"
                     color="primary"
                     size="medium"

@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
 const Footer = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
@@ -17,9 +17,9 @@ const Footer = () => {
       <Box marginBottom={4}>
         <Typography
           variant="h4"
-          align={'center'}
+          align={"center"}
           sx={{
-            fontWeight: 'medium',
+            fontWeight: "medium",
           }}
         >
           Didn't find what you are looking for?
@@ -27,9 +27,9 @@ const Footer = () => {
       </Box>
       <Box
         display="flex"
-        flexDirection={{ xs: 'column', sm: 'row' }}
-        justifyContent={'center'}
-        alignItems={{ xs: 'stretched', sm: 'center' }}
+        flexDirection={{ xs: "column", sm: "row" }}
+        justifyContent={"center"}
+        alignItems={{ xs: "stretched", sm: "center" }}
       >
         <Box
           component={Button}

@@ -1,6 +1,6 @@
-import React from 'react';
-import Button from '@mui/material/Button';
-import { alpha, useTheme } from '@mui/material/styles';
+import React from "react";
+import Button from "@mui/material/Button";
+import { alpha, useTheme } from "@mui/material/styles";
 
 const ThemeModeToggler = () => {
   const theme = useTheme();
@@ -9,18 +9,18 @@ const ThemeModeToggler = () => {
 
   return (
     <Button
-      variant={'outlined'}
+      variant={"outlined"}
       onClick={() => themeToggler()}
       aria-label="Dark mode toggler"
-      color={mode === 'light' ? 'primary' : 'secondary'}
+      color={mode === "light" ? "primary" : "secondary"}
       sx={{
         borderRadius: 2,
-        minWidth: 'auto',
+        minWidth: "auto",
         padding: 0.5,
         borderColor: alpha(theme.palette.divider, 0.2),
       }}
     >
-      {mode === 'light' ? (
+      {mode === "light" ? (
         <svg
           width={20}
           height={20}

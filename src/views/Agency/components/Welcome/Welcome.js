@@ -1,24 +1,24 @@
-import React from 'react';
-import Typed from 'react-typed';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { alpha, useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import React from "react";
+import Typed from "react-typed";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { alpha, useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 
 const Welcome = () => {
   const theme = useTheme();
 
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
   return (
     <Grid container spacing={4}>
-      <Grid item container xs={12} md={6} alignItems={'center'}>
-        <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
+      <Grid item container xs={12} md={6} alignItems={"center"}>
+        <Box data-aos={isMd ? "fade-right" : "fade-up"}>
           <Box marginBottom={2}>
             <Typography
               variant="h2"
@@ -28,18 +28,18 @@ const Welcome = () => {
               Welcome to
               <br />
               <Typography
-                color={'primary'}
-                component={'span'}
-                variant={'inherit'}
+                color={"primary"}
+                component={"span"}
+                variant={"inherit"}
                 sx={{
                   background: `linear-gradient(180deg, transparent 82%, ${alpha(
                     theme.palette.secondary.main,
-                    0.3,
+                    0.3
                   )} 0%)`,
                 }}
               >
                 <Typed
-                  strings={['Virtualground']}
+                  strings={["Virtualground"]}
                   typeSpeed={100}
                   loop={false}
                 />
@@ -53,8 +53,8 @@ const Welcome = () => {
           </Box>
           <Box
             display="flex"
-            flexDirection={{ xs: 'column', sm: 'row' }}
-            alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+            flexDirection={{ xs: "column", sm: "row" }}
+            alignItems={{ xs: "stretched", sm: "flex-start" }}
           >
             <Button
               variant="contained"
@@ -73,7 +73,7 @@ const Welcome = () => {
               fullWidth={isMd ? false : true}
               endIcon={
                 <Box
-                  component={'svg'}
+                  component={"svg"}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -96,14 +96,14 @@ const Welcome = () => {
       <Grid
         item
         container
-        alignItems={'center'}
-        justifyContent={'center'}
+        alignItems={"center"}
+        justifyContent={"center"}
         xs={12}
         md={6}
         sx={{
-          '& .lazy-load-image-background.lazy-load-image-loaded': {
-            width: '100%',
-            height: '100%',
+          "& .lazy-load-image-background.lazy-load-image-loaded": {
+            width: "100%",
+            height: "100%",
           },
         }}
       >
@@ -111,16 +111,18 @@ const Welcome = () => {
           component={LazyLoadImage}
           height={1}
           width={1}
-          src={'https://images.unsplash.com/photo-1502185635613-0a5b2e78efea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'}
+          src={
+            "https://images.unsplash.com/photo-1502185635613-0a5b2e78efea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          }
           alt="..."
           effect="blur"
           borderRadius={2}
           maxWidth={600}
           maxHeight={500}
           sx={{
-            objectFit: 'cover',
-            boxShadow: '19px 20px 0px 0 rgb(140 152 164 / 13%)',
-            filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
+            objectFit: "cover",
+            boxShadow: "19px 20px 0px 0 rgb(140 152 164 / 13%)",
+            filter: theme.palette.mode === "dark" ? "brightness(0.7)" : "none",
           }}
         />
       </Grid>

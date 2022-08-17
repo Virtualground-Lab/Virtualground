@@ -1,23 +1,23 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Button from '@mui/material/Button';
-import { useTheme } from '@mui/material/styles';
-import { colors } from '@mui/material';
+import React from "react";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Button from "@mui/material/Button";
+import { useTheme } from "@mui/material/styles";
+import { colors } from "@mui/material";
 
 const mock = [
   {
-    title: 'Account',
-    subtitle: 'Let’s try to fix your account issues.',
+    title: "Account",
+    subtitle: "Let’s try to fix your account issues.",
     count: 8,
     icon: (
       <Box
-        component={'svg'}
+        component={"svg"}
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -35,12 +35,12 @@ const mock = [
     color: colors.amber,
   },
   {
-    title: 'Organizations',
-    subtitle: 'Let’s try to fix your organizational issues.',
+    title: "Organizations",
+    subtitle: "Let’s try to fix your organizational issues.",
     count: 12,
     icon: (
       <Box
-        component={'svg'}
+        component={"svg"}
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -58,12 +58,12 @@ const mock = [
     color: colors.red,
   },
   {
-    title: 'Customization',
-    subtitle: 'Let’s try to fix your customization issues.',
+    title: "Customization",
+    subtitle: "Let’s try to fix your customization issues.",
     count: 9,
     icon: (
       <Box
-        component={'svg'}
+        component={"svg"}
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -84,12 +84,12 @@ const mock = [
 
 const Categories = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
   const renderContent = (title, subtitle, count, icon, color) => (
-    <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
+    <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
       <Box
         component={Avatar}
         bgcolor={color[100]}
@@ -100,23 +100,23 @@ const Categories = () => {
       >
         {icon}
       </Box>
-      <Typography variant={'h6'} fontWeight={700} align={'center'} gutterBottom>
+      <Typography variant={"h6"} fontWeight={700} align={"center"} gutterBottom>
         {title}
       </Typography>
-      <Typography color={'text.secondary'} align={'center'}>
+      <Typography color={"text.secondary"} align={"center"}>
         {subtitle}
       </Typography>
       <Box
         paddingY={1 / 2}
         paddingX={1}
-        bgcolor={'secondary.main'}
+        bgcolor={"secondary.main"}
         borderRadius={2}
         marginTop={2}
       >
         <Typography
-          variant={'caption'}
+          variant={"caption"}
           fontWeight={700}
-          sx={{ color: 'common.black' }}
+          sx={{ color: "common.black" }}
         >
           {count} answers
         </Typography>
@@ -129,7 +129,7 @@ const Categories = () => {
       <Box marginBottom={4}>
         <Typography
           variant="h4"
-          data-aos={'fade-up'}
+          data-aos={"fade-up"}
           gutterBottom
           sx={{
             fontWeight: 700,
@@ -137,14 +137,14 @@ const Categories = () => {
         >
           Related Help Center Categories
         </Typography>
-        <Typography variant="h6" color={'text.secondary'} data-aos={'fade-up'}>
+        <Typography variant="h6" color={"text.secondary"} data-aos={"fade-up"}>
           For entrepreneurs, startups and freelancers. If you didn’t find what
           you needed, these could help!
         </Typography>
         <Box
           display="flex"
-          flexDirection={{ xs: 'column', sm: 'row' }}
-          alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+          flexDirection={{ xs: "column", sm: "row" }}
+          alignItems={{ xs: "stretched", sm: "flex-start" }}
           marginTop={2}
         >
           <Button
@@ -184,7 +184,7 @@ const Categories = () => {
                   item.subtitle,
                   item.count,
                   item.icon,
-                  item.color,
+                  item.color
                 )}
               </CardContent>
             </Card>

@@ -1,8 +1,8 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Main from 'layouts/Main';
-import Container from 'components/Container';
-import { Application, Main as MainSection, Newsletter } from './components';
+import React from "react";
+import Box from "@mui/material/Box";
+import Main from "layouts/Main";
+import Container from "components/Container";
+import { Application, Main as MainSection, Newsletter } from "./components";
 
 const CareerOpening = () => {
   return (
@@ -10,7 +10,7 @@ const CareerOpening = () => {
       <Container>
         <MainSection />
       </Container>
-      <Box bgcolor={'alternate.main'}>
+      <Box bgcolor={"alternate.main"}>
         <Container>
           <Application />
         </Container>

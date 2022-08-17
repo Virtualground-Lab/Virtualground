@@ -1,40 +1,39 @@
-import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
-import { colors } from '@mui/material';
-import { Room1 } from 'threejs';
+import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import { colors } from "@mui/material";
+import { Room1 } from "threejs";
 
 const Hero = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
   return (
     <Grid container spacing={4}>
       <Grid item xs={12} md={6}>
-        <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
+        <Box data-aos={isMd ? "fade-right" : "fade-up"}>
           <Box marginBottom={2}>
             <Typography
               variant="h3"
               color="text.primary"
               sx={{ fontWeight: 700 }}
             >
-            
-             Explore{' '}
+              Explore{" "}
               <Typography
-                color={'primary'}
-                component={'span'}
-                variant={'inherit'}
+                color={"primary"}
+                component={"span"}
+                variant={"inherit"}
                 sx={{
                   background: `linear-gradient(to right, ${theme.palette.primary.main}, ${theme.palette.primary.dark})`,
-                  backgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
                 }}
               >
                 Virtualground marketplace.
@@ -80,20 +79,13 @@ const Hero = () => {
       <Grid
         item
         container
-        alignItems={'center'}
-        justifyContent={'center'}
+        alignItems={"center"}
+        justifyContent={"center"}
         xs={12}
         md={6}
       >
-        <Box
-          height={1}
-          width={1}
-          maxWidth={600}
-          minHeight={500}
-          xs={12}
-          md={6}
-        >
-          <Room1/>
+        <Box height={1} width={1} maxWidth={600} minHeight={500} xs={12} md={6}>
+          <Room1 />
         </Box>
       </Grid>
     </Grid>

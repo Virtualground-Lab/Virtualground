@@ -1,128 +1,128 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import { colors } from '@mui/material';
+import React from "react";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import { colors } from "@mui/material";
 
 const mock = {
   account: {
-    title: 'Account',
-    subtitle: 'Let’s try to fix your account issues.',
+    title: "Account",
+    subtitle: "Let’s try to fix your account issues.",
     items: [
       {
-        title: 'Find account number',
-        updated: '1 week ago',
+        title: "Find account number",
+        updated: "1 week ago",
       },
       {
-        title: 'ATMs and ATM fees',
-        updated: 'a day ago',
+        title: "ATMs and ATM fees",
+        updated: "a day ago",
       },
       {
-        title: 'Business retirement services',
-        updated: '2 month ago',
+        title: "Business retirement services",
+        updated: "2 month ago",
       },
       {
-        title: 'Planning for major life events',
-        updated: '4 days ago',
+        title: "Planning for major life events",
+        updated: "4 days ago",
       },
     ],
   },
   billing: {
-    title: 'Billing',
-    subtitle: 'Let’s try to fix your billing issues.',
+    title: "Billing",
+    subtitle: "Let’s try to fix your billing issues.",
     items: [
       {
-        title: 'Business online banking and services',
-        updated: '1 week ago',
+        title: "Business online banking and services",
+        updated: "1 week ago",
       },
       {
-        title: 'Business loans, lines & leasing',
-        updated: 'a day ago',
+        title: "Business loans, lines & leasing",
+        updated: "a day ago",
       },
       {
-        title: 'Mortgage basics',
-        updated: '2 month ago',
+        title: "Mortgage basics",
+        updated: "2 month ago",
       },
       {
-        title: 'Credit cards',
-        updated: '4 days ago',
+        title: "Credit cards",
+        updated: "4 days ago",
       },
     ],
   },
   organizations: {
-    title: 'Organizations',
-    subtitle: 'Let’s try to fix your organizational issues.',
+    title: "Organizations",
+    subtitle: "Let’s try to fix your organizational issues.",
     items: [
       {
-        title: 'Redeem rewards points',
-        updated: '1 week ago',
+        title: "Redeem rewards points",
+        updated: "1 week ago",
       },
       {
-        title: 'Growing a business',
-        updated: 'a day ago',
+        title: "Growing a business",
+        updated: "a day ago",
       },
       {
-        title: 'Accessible banking',
-        updated: '2 month ago',
+        title: "Accessible banking",
+        updated: "2 month ago",
       },
       {
-        title: 'Mobile banking',
-        updated: '4 days ago',
+        title: "Mobile banking",
+        updated: "4 days ago",
       },
     ],
   },
   customizing: {
-    title: 'Customizing',
-    subtitle: 'Let’s try to fix your customizing issues.',
+    title: "Customizing",
+    subtitle: "Let’s try to fix your customizing issues.",
     items: [
       {
-        title: 'Planning for college',
-        updated: '1 week ago',
+        title: "Planning for college",
+        updated: "1 week ago",
       },
       {
-        title: 'Learn about credit',
-        updated: 'a day ago',
+        title: "Learn about credit",
+        updated: "a day ago",
       },
       {
-        title: 'Budgeting & saving',
-        updated: '2 month ago',
+        title: "Budgeting & saving",
+        updated: "2 month ago",
       },
       {
-        title: 'Transferring funds',
-        updated: '4 days ago',
+        title: "Transferring funds",
+        updated: "4 days ago",
       },
     ],
   },
 };
 
 const Faq = () => {
-  const renderFaqBox = (title = '', subtitle = '') => (
+  const renderFaqBox = (title = "", subtitle = "") => (
     <Box
       component={Card}
-      variant={'outlined'}
-      bgcolor={'transparent'}
+      variant={"outlined"}
+      bgcolor={"transparent"}
       sx={{
-        cursor: 'pointer',
-        '&:hover': {
+        cursor: "pointer",
+        "&:hover": {
           boxShadow: 2,
         },
       }}
     >
       <CardContent>
         <Box
-          display={'flex'}
-          flexDirection={{ xs: 'column', sm: 'row' }}
-          flex={'1 1 100%'}
-          justifyContent={{ sm: 'space-between' }}
-          alignItems={{ sm: 'center' }}
+          display={"flex"}
+          flexDirection={{ xs: "column", sm: "row" }}
+          flex={"1 1 100%"}
+          justifyContent={{ sm: "space-between" }}
+          alignItems={{ sm: "center" }}
         >
           <Typography fontWeight={700} sx={{ marginBottom: { xs: 1, sm: 0 } }}>
             {title}
           </Typography>
-          <Typography variant={'caption'} color={'text.secondary'}>
+          <Typography variant={"caption"} color={"text.secondary"}>
             {subtitle}
           </Typography>
         </Box>
@@ -143,7 +143,7 @@ const Faq = () => {
               height={60}
             >
               <Box
-                component={'svg'}
+                component={"svg"}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -158,10 +158,10 @@ const Faq = () => {
                 />
               </Box>
             </Box>
-            <Typography variant={'h6'} fontWeight={700} gutterBottom>
+            <Typography variant={"h6"} fontWeight={700} gutterBottom>
               {mock.account.title}
             </Typography>
-            <Typography color={'text.secondary'}>
+            <Typography color={"text.secondary"}>
               {mock.account.subtitle}
             </Typography>
           </Box>
@@ -184,7 +184,7 @@ const Faq = () => {
               height={60}
             >
               <Box
-                component={'svg'}
+                component={"svg"}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -199,10 +199,10 @@ const Faq = () => {
                 />
               </Box>
             </Box>
-            <Typography variant={'h6'} fontWeight={700} gutterBottom>
+            <Typography variant={"h6"} fontWeight={700} gutterBottom>
               {mock.billing.title}
             </Typography>
-            <Typography color={'text.secondary'}>
+            <Typography color={"text.secondary"}>
               {mock.billing.subtitle}
             </Typography>
           </Box>
@@ -225,7 +225,7 @@ const Faq = () => {
               height={60}
             >
               <Box
-                component={'svg'}
+                component={"svg"}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -240,10 +240,10 @@ const Faq = () => {
                 />
               </Box>
             </Box>
-            <Typography variant={'h6'} fontWeight={700} gutterBottom>
+            <Typography variant={"h6"} fontWeight={700} gutterBottom>
               {mock.organizations.title}
             </Typography>
-            <Typography color={'text.secondary'}>
+            <Typography color={"text.secondary"}>
               {mock.organizations.subtitle}
             </Typography>
           </Box>
@@ -266,7 +266,7 @@ const Faq = () => {
               height={60}
             >
               <Box
-                component={'svg'}
+                component={"svg"}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -281,10 +281,10 @@ const Faq = () => {
                 />
               </Box>
             </Box>
-            <Typography variant={'h6'} fontWeight={700} gutterBottom>
+            <Typography variant={"h6"} fontWeight={700} gutterBottom>
               {mock.customizing.title}
             </Typography>
-            <Typography color={'text.secondary'}>
+            <Typography color={"text.secondary"}>
               {mock.customizing.subtitle}
             </Typography>
           </Box>

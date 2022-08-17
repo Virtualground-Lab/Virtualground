@@ -1,34 +1,33 @@
-import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import { useTheme } from '@mui/material/styles';
-import { Watch, Stacy, Shoe } from 'threejs';
+import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import { useTheme } from "@mui/material/styles";
+import { Watch, Stacy, Shoe } from "threejs";
 
 const mock = [
   {
     media: <Watch />,
-    title: 'Watch #01',
-    price: '0',
+    title: "Watch #01",
+    price: "0",
   },
   {
     media: <Stacy />,
-    title: 'Stacy',
-    price: '0',
+    title: "Stacy",
+    price: "0",
   },
   {
-    media: <Shoe/>,
-    title: 'Shoe #01',
-    price: '0',
+    media: <Shoe />,
+    title: "Shoe #01",
+    price: "0",
   },
-  
 ];
 
 const Products = () => {
@@ -39,19 +38,19 @@ const Products = () => {
       <Box marginBottom={4}>
         <Typography
           sx={{
-            textTransform: 'uppercase',
-            fontWeight: 'medium',
+            textTransform: "uppercase",
+            fontWeight: "medium",
           }}
           gutterBottom
-          color={'secondary'}
-          align={'center'}
+          color={"secondary"}
+          align={"center"}
         >
           Products
         </Typography>
         <Typography
           variant="h4"
-          align={'center'}
-          data-aos={'fade-up'}
+          align={"center"}
+          data-aos={"fade-up"}
           gutterBottom
           sx={{
             fontWeight: 700,
@@ -61,14 +60,14 @@ const Products = () => {
         </Typography>
         <Typography
           variant="h6"
-          align={'center'}
-          color={'text.secondary'}
-          data-aos={'fade-up'}
+          align={"center"}
+          color={"text.secondary"}
+          data-aos={"fade-up"}
         >
-          Experience your virtual meetings like never before. Buy 3D virtual produts &
-          accessories online.
+          Experience your virtual meetings like never before. Buy 3D virtual
+          produts & accessories online.
         </Typography>
-        <Box display="flex" justifyContent={'center'} marginTop={2}>
+        <Box display="flex" justifyContent={"center"} marginTop={2}>
           <Button variant="contained" color="primary" size="large">
             View all
           </Button>
@@ -82,43 +81,43 @@ const Products = () => {
             sm={6}
             md={4}
             key={i}
-            data-aos={'fade-up'}
+            data-aos={"fade-up"}
             data-aos-delay={i * 100}
             data-aos-offset={100}
             data-aos-duration={600}
           >
-            <Box display={'block'} width={1} height={1}>
+            <Box display={"block"} width={1} height={1}>
               <Box
                 component={Card}
                 width={1}
                 height={1}
-                display={'flex'}
-                flexDirection={'column'}
+                display={"flex"}
+                flexDirection={"column"}
               >
                 <CardMedia
                   sx={{
-                    position: 'relative',
+                    position: "relative",
                     height: { xs: 240, sm: 340, md: 280 },
-                    overflow: 'hidden',
+                    overflow: "hidden",
                     padding: 0,
                     paddingBottom: 0,
                     background: theme.palette.alternate.main,
-                    display: 'flex',
-                    alignItems: 'flex-end',
-                    justifyContent: 'center',
+                    display: "flex",
+                    alignItems: "flex-end",
+                    justifyContent: "center",
                   }}
                 >
                   <Box
                     sx={{
-                      objectFit: 'contain',
+                      objectFit: "contain",
                     }}
                   >
                     {item.media}
                   </Box>
                   <Box
-                    display={'flex'}
-                    justifyContent={'flex-end'}
-                    position={'absolute'}
+                    display={"flex"}
+                    justifyContent={"flex-end"}
+                    position={"absolute"}
                     top={0}
                     left={0}
                     right={0}
@@ -128,18 +127,18 @@ const Products = () => {
                     <Box
                       component={IconButton}
                       color="secondary"
-                      bgcolor={'background.paper'}
-                      size={'large'}
+                      bgcolor={"background.paper"}
+                      size={"large"}
                     >
                       <Box
-                        component={'svg'}
+                        component={"svg"}
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                         width={20}
                         height={20}
-                        color={'secondary.main'}
+                        color={"secondary.main"}
                       >
                         <path
                           strokeLinecap="round"
@@ -153,18 +152,18 @@ const Products = () => {
                 </CardMedia>
                 <CardContent>
                   <Typography
-                    variant={'h6'}
-                    align={'left'}
+                    variant={"h6"}
+                    align={"left"}
                     sx={{ fontWeight: 700 }}
                   >
                     {item.title}
                   </Typography>
                   <Box
-                    display={'flex'}
-                    justifyContent={'flex-start'}
+                    display={"flex"}
+                    justifyContent={"flex-start"}
                     marginY={1}
                   >
-                    <Box display={'flex'} justifyContent={'center'}>
+                    <Box display={"flex"} justifyContent={"center"}>
                       {[1, 2, 3, 4, 5].map((item) => (
                         <Box key={item} color={theme.palette.secondary.main}>
                           <svg
@@ -180,15 +179,15 @@ const Products = () => {
                       ))}
                     </Box>
                   </Box>
-                  <CardActions sx={{ justifyContent: 'space-between' }}>
-                    <Typography sx={{ fontWeight: 700 }} color={'primary'}>
+                  <CardActions sx={{ justifyContent: "space-between" }}>
+                    <Typography sx={{ fontWeight: 700 }} color={"primary"}>
                       {item.price} VGR
                     </Typography>
                     <Button
-                      variant={'outlined'}
+                      variant={"outlined"}
                       startIcon={
                         <Box
-                          component={'svg'}
+                          component={"svg"}
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"

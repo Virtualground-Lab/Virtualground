@@ -1,5 +1,5 @@
-import React from 'react';
-import BlogReachView from 'views/BlogReachView';
+import React from "react";
+import BlogReachView from "views/BlogReachView";
 
 const BlogReachViewPage = () => {
   return <BlogReachView />;

@@ -1,1 +1,1 @@
-export { default } from './Trek';
+export { default } from "./Trek";

@@ -1,10 +1,10 @@
-import React from 'react';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
-import { useTheme } from '@mui/material/styles';
+import React from "react";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 
 const Footer = () => {
   const theme = useTheme();
@@ -14,38 +14,38 @@ const Footer = () => {
     <Grid container spacing={2}>
       <Grid item xs={12}>
         <Box
-          display={'flex'}
-          justifyContent={'space-between'}
-          alignItems={'center'}
+          display={"flex"}
+          justifyContent={"space-between"}
+          alignItems={"center"}
           width={1}
-          flexDirection={{ xs: 'column', sm: 'row' }}
+          flexDirection={{ xs: "column", sm: "row" }}
         >
           <Box
-            display={'flex'}
+            display={"flex"}
             component="a"
             href="/"
             title="theFront"
             width={110}
           >
             <Box
-              component={'img'}
+              component={"img"}
               src={
-                mode === 'light'
-                  ? 'https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Flogo2.png?alt=media&token=55fcb307-a743-4c3e-9b9d-a4d9f3512572'
-                  : 'https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Flogo2.png?alt=media&token=55fcb307-a743-4c3e-9b9d-a4d9f3512572'
+                mode === "light"
+                  ? "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Flogo2.png?alt=media&token=55fcb307-a743-4c3e-9b9d-a4d9f3512572"
+                  : "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Flogo2.png?alt=media&token=55fcb307-a743-4c3e-9b9d-a4d9f3512572"
               }
               height={1}
               width={1}
             />
           </Box>
-          <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
+          <Box display="flex" flexWrap={"wrap"} alignItems={"center"}>
             <Box marginTop={1} marginRight={1}>
               <Link
                 underline="none"
                 component="a"
                 href="/faq"
                 color="text.primary"
-                variant={'subtitle2'}
+                variant={"subtitle2"}
               >
                 FAQ
               </Link>
@@ -56,18 +56,18 @@ const Footer = () => {
                 component="a"
                 href="/policy"
                 color="text.primary"
-                variant={'subtitle2'}
+                variant={"subtitle2"}
               >
                 Privacy
               </Link>
-            </Box>   
+            </Box>
             <Box marginTop={1} marginRight={1}>
               <Link
                 underline="none"
                 component="a"
                 href="/terms"
                 color="text.primary"
-                variant={'subtitle2'}
+                variant={"subtitle2"}
               >
                 Terms of Use
               </Link>
@@ -78,7 +78,7 @@ const Footer = () => {
                 component="a"
                 href="/careers"
                 color="text.primary"
-                variant={'subtitle2'}
+                variant={"subtitle2"}
               >
                 Careers
               </Link>
@@ -100,8 +100,8 @@ const Footer = () => {
       </Grid>
       <Grid item xs={12}>
         <Typography
-          align={'center'}
-          variant={'subtitle2'}
+          align={"center"}
+          variant={"subtitle2"}
           color="text.secondary"
           gutterBottom
         >

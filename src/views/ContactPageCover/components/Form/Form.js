@@ -1,47 +1,44 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import { useFormik } from 'formik';
-import * as yup from 'yup';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import { useTheme } from '@mui/material/styles';
+import React from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import { useTheme } from "@mui/material/styles";
 
 const validationSchema = yup.object({
   firstName: yup
     .string()
     .trim()
-    .min(2, 'Please enter a valid name')
-    .max(50, 'Please enter a valid name')
-    .required('Please specify your first name'),
+    .min(2, "Please enter a valid name")
+    .max(50, "Please enter a valid name")
+    .required("Please specify your first name"),
   lastName: yup
     .string()
     .trim()
-    .min(2, 'Please enter a valid name')
-    .max(50, 'Please enter a valid name')
-    .required('Please specify your last name'),
+    .min(2, "Please enter a valid name")
+    .max(50, "Please enter a valid name")
+    .required("Please specify your last name"),
   email: yup
     .string()
     .trim()
-    .email('Please enter a valid email address')
-    .required('Email is required.'),
-  message: yup
-    .string()
-    .trim()
-    .required('Please specify your message'),
+    .email("Please enter a valid email address")
+    .required("Email is required."),
+  message: yup.string().trim().required("Please specify your message"),
 });
 
 const Contact = () => {
   const theme = useTheme();
 
   const initialValues = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    message: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
   };
 
   const onSubmit = (values) => {
@@ -55,17 +52,17 @@ const Contact = () => {
   });
 
   return (
-    <Box maxWidth={600} margin={'0 auto'}>
+    <Box maxWidth={600} margin={"0 auto"}>
       <Box marginBottom={4}>
         <Typography
-          variant={'h3'}
+          variant={"h3"}
           sx={{ fontWeight: 700 }}
-          align={'center'}
+          align={"center"}
           gutterBottom
         >
           Contact us
         </Typography>
-        <Typography color="text.secondary" align={'center'}>
+        <Typography color="text.secondary" align={"center"}>
           Rather than worrying about switching offices every couple years, you
           can instead stay in the same location and grow-up from your shared
           coworking space to an office that takes up an entire floor.
@@ -140,7 +137,7 @@ const Contact = () => {
                 helperText={formik.touched.message && formik.errors.message}
               />
             </Grid>
-            <Grid item container justifyContent={'center'} xs={12}>
+            <Grid item container justifyContent={"center"} xs={12}>
               <Button
                 sx={{ height: 54, minWidth: 150 }}
                 variant="contained"
@@ -151,7 +148,7 @@ const Contact = () => {
                 Submit
               </Button>
             </Grid>
-            <Grid item container justifyContent={'center'} xs={12}>
+            <Grid item container justifyContent={"center"} xs={12}>
               <Typography color="text.secondary">
                 We'll get back to you in 1-2 business days.
               </Typography>
@@ -159,33 +156,33 @@ const Contact = () => {
             <Grid item xs={12}>
               <Divider />
             </Grid>
-            <Grid item container justifyContent={'center'} xs={12}>
+            <Grid item container justifyContent={"center"} xs={12}>
               <Box>
                 <Typography component="p" variant="body2" align="left">
-                  By clicking on "submit" you agree to our{' '}
+                  By clicking on "submit" you agree to our{" "}
                   <Box
                     component="a"
                     href=""
                     color={theme.palette.text.primary}
-                    fontWeight={'700'}
+                    fontWeight={"700"}
                   >
                     Privacy Policy
                   </Box>
-                  ,{' '}
+                  ,{" "}
                   <Box
                     component="a"
                     href=""
                     color={theme.palette.text.primary}
-                    fontWeight={'700'}
+                    fontWeight={"700"}
                   >
                     Data Policy
-                  </Box>{' '}
-                  and{' '}
+                  </Box>{" "}
+                  and{" "}
                   <Box
                     component="a"
                     href=""
                     color={theme.palette.text.primary}
-                    fontWeight={'700'}
+                    fontWeight={"700"}
                   >
                     Cookie Policy
                   </Box>

@@ -1,28 +1,27 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import Button from "@mui/material/Button";
 
 const mock = [
   {
-    title: 'High quality',
-    subtitle:
-      'We provide high quality 3d surroundings to make it more real.',
+    title: "High quality",
+    subtitle: "We provide high quality 3d surroundings to make it more real.",
   },
   {
-    title: 'Develop',
+    title: "Develop",
     subtitle:
-      'We let our users to develop their own model and deploy it on the Virtualground platform.',
+      "We let our users to develop their own model and deploy it on the Virtualground platform.",
   },
   {
-    title: 'Ready to use',
+    title: "Ready to use",
     subtitle:
-      'Shop for digital assets on marketplace and use it in your virtual environment.',
+      "Shop for digital assets on marketplace and use it in your virtual environment.",
   },
 ];
 
@@ -34,15 +33,15 @@ const Differences = () => {
       <Box marginBottom={4}>
         <Typography
           sx={{
-            textTransform: 'uppercase',
-            fontWeight: 'medium',
+            textTransform: "uppercase",
+            fontWeight: "medium",
           }}
           gutterBottom
-          color={'secondary'}
+          color={"secondary"}
         >
           Differences
         </Typography>
-        <Typography fontWeight={700} variant={'h4'}>
+        <Typography fontWeight={700} variant={"h4"}>
           What makes it different?
         </Typography>
       </Box>
@@ -50,13 +49,13 @@ const Differences = () => {
         {mock.map((item, i) => (
           <Grid item xs={12} sm={4} key={i}>
             <Box
-              display={'block'}
+              display={"block"}
               width={1}
               height={1}
               sx={{
-                textDecoration: 'none',
-                transition: 'all .2s ease-in-out',
-                '&:hover': {
+                textDecoration: "none",
+                transition: "all .2s ease-in-out",
+                "&:hover": {
                   transform: `translateY(-${theme.spacing(1 / 2)})`,
                 },
               }}
@@ -65,17 +64,17 @@ const Differences = () => {
                 component={Card}
                 width={1}
                 height={1}
-                display={'flex'}
-                flexDirection={'column'}
-                data-aos={'fade-up'}
+                display={"flex"}
+                flexDirection={"column"}
+                data-aos={"fade-up"}
                 data-aos-delay={i * 100}
                 data-aos-offset={100}
                 data-aos-duration={600}
-                bgcolor={'alternate.main'}
+                bgcolor={"alternate.main"}
               >
                 <CardContent>
                   <Typography
-                    variant={'h6'}
+                    variant={"h6"}
                     gutterBottom
                     sx={{ fontWeight: 500 }}
                   >
@@ -86,7 +85,7 @@ const Differences = () => {
                   </Typography>
                 </CardContent>
                 <Box flexGrow={1} />
-                <CardActions sx={{ justifyContent: 'flex-end', paddingX: 4 }}>
+                <CardActions sx={{ justifyContent: "flex-end", paddingX: 4 }}>
                   <Button size="large">Learn more</Button>
                 </CardActions>
               </Box>

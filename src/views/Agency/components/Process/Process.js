@@ -1,37 +1,35 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
-import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
-import { useTheme } from '@mui/material/styles';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import Box from '@mui/material/Box';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import React, { useState } from "react";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
+import { useTheme } from "@mui/material/styles";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Box from "@mui/material/Box";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 const mock = [
   {
     title: 300,
-    subtitle:
-      'avatar wearables to choose from.',
-    suffix: '+',
+    subtitle: "avatar wearables to choose from.",
+    suffix: "+",
   },
   {
     title: 45,
-    subtitle:
-      '3D environment to choose.',
-    suffix: '+',
+    subtitle: "3D environment to choose.",
+    suffix: "+",
   },
   {
     title: 99,
-    subtitle: 'of user satisfaction.',
-    suffix: '%',
+    subtitle: "of user satisfaction.",
+    suffix: "%",
   },
 ];
 
 const Process = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
@@ -46,20 +44,20 @@ const Process = () => {
 
   return (
     <Box>
-      <Grid container spacing={4} direction={isMd ? 'row' : 'column-reverse'}>
-        <Grid item xs={12} md={6} data-aos={isMd ? 'fade-right' : 'fade-up'}>
+      <Grid container spacing={4} direction={isMd ? "row" : "column-reverse"}>
+        <Grid item xs={12} md={6} data-aos={isMd ? "fade-right" : "fade-up"}>
           <Box marginBottom={2}>
-          <Typography
-            sx={{
-              textTransform: 'uppercase',
-              fontWeight: 'medium',
-            }}
-            gutterBottom
-            color={'secondary'}
-          >
-            Insights
-          </Typography>
-            <Typography variant={'h4'} sx={{ fontWeight: 700 }} gutterBottom>
+            <Typography
+              sx={{
+                textTransform: "uppercase",
+                fontWeight: "medium",
+              }}
+              gutterBottom
+              color={"secondary"}
+            >
+              Insights
+            </Typography>
+            <Typography variant={"h4"} sx={{ fontWeight: 700 }} gutterBottom>
               We are a growing virtual world platform aimed user interactions.
             </Typography>
             <Typography color="text.secondary">
@@ -103,7 +101,7 @@ const Process = () => {
           xs={12}
           md={6}
           sx={{
-            display: { xs: 'none', md: 'flex' },
+            display: { xs: "none", md: "flex" },
           }}
         >
           <Box component={Card} boxShadow={4} height={1} width={1}>
@@ -112,10 +110,10 @@ const Process = () => {
               height={1}
               width={1}
               minHeight={300}
-              image='https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fpexels-julia.jpg?alt=media&token=4e71b678-d3aa-44e4-8988-50e905ba68a6'
+              image="https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fpexels-julia.jpg?alt=media&token=4e71b678-d3aa-44e4-8988-50e905ba68a6"
               sx={{
                 filter:
-                  theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
+                  theme.palette.mode === "dark" ? "brightness(0.7)" : "none",
               }}
             />
           </Box>

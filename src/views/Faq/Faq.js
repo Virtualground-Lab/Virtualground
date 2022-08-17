@@ -1,10 +1,10 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
 
-import Main from 'layouts/Main';
-import Container from 'components/Container';
-import { Content, Footer, Headline, Contact } from './components';
+import Main from "layouts/Main";
+import Container from "components/Container";
+import { Content, Footer, Headline, Contact } from "./components";
 
 const Faq = () => {
   const theme = useTheme();

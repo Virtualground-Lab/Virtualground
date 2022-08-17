@@ -1,5 +1,5 @@
-import React from 'react';
-import Agency from 'views/Agency';
+import React from "react";
+import Agency from "views/Agency";
 
 const IndexPage = () => {
   return <Agency />;

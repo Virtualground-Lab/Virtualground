@@ -1,5 +1,5 @@
-import React from 'react';
-import Policy from 'views/Policy';
+import React from "react";
+import Policy from "views/Policy";
 
 const PolicyPage = () => {
   return <Policy />;

@@ -1,1 +1,1 @@
-export { default } from './LastStories';
+export { default } from "./LastStories";

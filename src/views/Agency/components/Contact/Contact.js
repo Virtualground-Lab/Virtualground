@@ -1,40 +1,40 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 const Contact = () => {
   return (
     <Box>
       <Typography
         sx={{
-          textTransform: 'uppercase',
-          fontWeight: 'medium',
+          textTransform: "uppercase",
+          fontWeight: "medium",
         }}
         gutterBottom
-        color={'secondary'}
-        align={'center'}
+        color={"secondary"}
+        align={"center"}
       >
         Get Started
       </Typography>
-      <Typography fontWeight={700} variant={'h3'} gutterBottom align={'center'}>
+      <Typography fontWeight={700} variant={"h3"} gutterBottom align={"center"}>
         Get started with theFront today
       </Typography>
       <Typography
-        variant={'h6'}
-        component={'p'}
-        color={'text.secondary'}
-        align={'center'}
+        variant={"h6"}
+        component={"p"}
+        color={"text.secondary"}
+        align={"center"}
       >
         Build a beautiful, modern website with flexible, fully customizable,
         atomic MUI components.
       </Typography>
-      <Box marginTop={3} display={'flex'} justifyContent={'center'}>
+      <Box marginTop={3} display={"flex"} justifyContent={"center"}>
         <Button
-          component={'a'}
-          href={'https://mui.com/store/items/the-front-landing-page/'}
-          target={'_blank'}
+          component={"a"}
+          href={"https://mui.com/store/items/the-front-landing-page/"}
+          target={"_blank"}
           variant="contained"
           color="primary"
           size="large"

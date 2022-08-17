@@ -1,39 +1,36 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import { useFormik } from 'formik';
-import * as yup from 'yup';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import { useTheme } from '@mui/material/styles';
+import React from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import { useTheme } from "@mui/material/styles";
 
-import Container from 'components/Container';
+import Container from "components/Container";
 
 const validationSchema = yup.object({
   firstName: yup
     .string()
     .trim()
-    .min(2, 'Please enter a valid name')
-    .max(50, 'Please enter a valid name')
-    .required('Please specify your first name'),
+    .min(2, "Please enter a valid name")
+    .max(50, "Please enter a valid name")
+    .required("Please specify your first name"),
   lastName: yup
     .string()
     .trim()
-    .min(2, 'Please enter a valid name')
-    .max(50, 'Please enter a valid name')
-    .required('Please specify your last name'),
+    .min(2, "Please enter a valid name")
+    .max(50, "Please enter a valid name")
+    .required("Please specify your last name"),
   email: yup
     .string()
     .trim()
-    .email('Please enter a valid email address')
-    .required('Email is required.'),
-  message: yup
-    .string()
-    .trim()
-    .required('Please specify your message'),
+    .email("Please enter a valid email address")
+    .required("Email is required."),
+  message: yup.string().trim().required("Please specify your message"),
 });
 
 const Contact = () => {
@@ -41,10 +38,10 @@ const Contact = () => {
 
   const LeftSide = () => {
     const initialValues = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      message: '',
+      firstName: "",
+      lastName: "",
+      email: "",
+      message: "",
     };
 
     const onSubmit = (values) => {
@@ -60,7 +57,7 @@ const Contact = () => {
     return (
       <Box>
         <Box marginBottom={4}>
-          <Typography variant={'h3'} sx={{ fontWeight: 700 }} gutterBottom>
+          <Typography variant={"h3"} sx={{ fontWeight: 700 }} gutterBottom>
             Contact us
           </Typography>
           <Typography color="text.secondary">
@@ -164,30 +161,30 @@ const Contact = () => {
               <Grid item xs={12}>
                 <Box>
                   <Typography component="p" variant="body2" align="left">
-                    By clicking on "submit" you agree to our{' '}
+                    By clicking on "submit" you agree to our{" "}
                     <Box
                       component="a"
                       href=""
                       color={theme.palette.text.primary}
-                      fontWeight={'700'}
+                      fontWeight={"700"}
                     >
                       Privacy Policy
                     </Box>
-                    ,{' '}
+                    ,{" "}
                     <Box
                       component="a"
                       href=""
                       color={theme.palette.text.primary}
-                      fontWeight={'700'}
+                      fontWeight={"700"}
                     >
                       Data Policy
-                    </Box>{' '}
-                    and{' '}
+                    </Box>{" "}
+                    and{" "}
                     <Box
                       component="a"
                       href=""
                       color={theme.palette.text.primary}
-                      fontWeight={'700'}
+                      fontWeight={"700"}
                     >
                       Cookie Policy
                     </Box>
@@ -216,9 +213,9 @@ const Contact = () => {
         style={{
           minHeight: 300,
           filter:
-            theme.palette.mode === 'dark'
-              ? 'grayscale(0.5) opacity(0.7)'
-              : 'none',
+            theme.palette.mode === "dark"
+              ? "grayscale(0.5) opacity(0.7)"
+              : "none",
         }}
       />
     );
@@ -229,18 +226,18 @@ const Contact = () => {
       sx={{
         width: 1,
         height: 1,
-        overflow: 'hidden',
+        overflow: "hidden",
       }}
     >
       <Container paddingX={0} paddingY={0} maxWidth={{ sm: 1, md: 1236 }}>
         <Box
-          display={'flex'}
-          flexDirection={{ xs: 'column', md: 'row' }}
-          position={'relative'}
+          display={"flex"}
+          flexDirection={{ xs: "column", md: "row" }}
+          position={"relative"}
         >
           <Box
-            display={'flex'}
-            alignItems={'center'}
+            display={"flex"}
+            alignItems={"center"}
             width={1}
             order={{ xs: 2, md: 1 }}
           >
@@ -250,34 +247,34 @@ const Contact = () => {
           </Box>
           <Box
             sx={{
-              flex: { xs: '0 0 100%', md: '0 0 50%' },
-              position: 'relative',
-              maxWidth: { xs: '100%', md: '50%' },
+              flex: { xs: "0 0 100%", md: "0 0 50%" },
+              position: "relative",
+              maxWidth: { xs: "100%", md: "50%" },
               minHeight: { xs: 300, md: 600 },
               order: { xs: 1, md: 2 },
             }}
           >
             <Box
               sx={{
-                width: { xs: 1, md: '50vw' },
-                height: '100%',
-                position: 'relative',
+                width: { xs: 1, md: "50vw" },
+                height: "100%",
+                position: "relative",
               }}
             >
               <Box
                 sx={{
-                  width: '100%',
-                  height: '100%',
-                  overflow: 'hidden',
+                  width: "100%",
+                  height: "100%",
+                  overflow: "hidden",
                 }}
               >
                 <Box
                   sx={{
-                    overflow: 'hidden',
-                    left: '0%',
+                    overflow: "hidden",
+                    left: "0%",
                     width: 1,
                     height: 1,
-                    position: { xs: 'relative', md: 'absolute' },
+                    position: { xs: "relative", md: "absolute" },
                   }}
                 >
                   <RightSide />

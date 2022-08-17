@@ -1,1 +1,1 @@
-export { default } from './MostViewedArticles';
+export { default } from "./MostViewedArticles";

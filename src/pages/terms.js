@@ -1,5 +1,5 @@
-import React from 'react';
-import Terms from 'views/Terms';
+import React from "react";
+import Terms from "views/Terms";
 
 const CompanyTermsPage = () => {
   return <Terms />;

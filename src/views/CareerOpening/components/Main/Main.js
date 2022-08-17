@@ -1,37 +1,37 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemText from '@mui/material/ListItemText';
-import Avatar from '@mui/material/Avatar';
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemText from "@mui/material/ListItemText";
+import Avatar from "@mui/material/Avatar";
 
 const Main = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
   return (
     <Box>
       <Box
-        display={'flex'}
-        justifyContent={'space-between'}
-        alignItems={{ xs: 'flex-start', sm: 'center' }}
-        flexDirection={{ xs: 'column', sm: 'row' }}
+        display={"flex"}
+        justifyContent={"space-between"}
+        alignItems={{ xs: "flex-start", sm: "center" }}
+        flexDirection={{ xs: "column", sm: "row" }}
       >
         <Box>
-          <Typography fontWeight={700} variant={'h4'} gutterBottom>
+          <Typography fontWeight={700} variant={"h4"} gutterBottom>
             UX /UI Designer
           </Typography>
-          <Typography variant={'h6'}>San Francisco, CA · Full time</Typography>
+          <Typography variant={"h6"}>San Francisco, CA · Full time</Typography>
         </Box>
         <Box display="flex" marginTop={{ xs: 2, md: 0 }}>
           <Button variant="contained" color="primary" size="large">
@@ -52,10 +52,10 @@ const Main = () => {
       <Grid container spacing={isMd ? 4 : 2}>
         <Grid item xs={12} md={8}>
           <Box marginBottom={3}>
-            <Typography variant={'h5'} fontWeight={700} gutterBottom>
+            <Typography variant={"h5"} fontWeight={700} gutterBottom>
               Who we are
             </Typography>
-            <Typography component={'p'}>
+            <Typography component={"p"}>
               We believe lorem ipsum dolor sit amet, consectetur adipiscing
               elit. Phasellus feugiat elit vitae enim lacinia semper. Cras nulla
               lectus, porttitor vitae urna iaculis, malesuada tincidunt lectus.
@@ -67,10 +67,10 @@ const Main = () => {
             </Typography>
           </Box>
           <Box marginBottom={3}>
-            <Typography variant={'h5'} fontWeight={700} gutterBottom>
+            <Typography variant={"h5"} fontWeight={700} gutterBottom>
               What we’re looking for
             </Typography>
-            <Typography component={'p'}>
+            <Typography component={"p"}>
               Aenean gravida est nec diam suscipit iaculis. Praesent urna velit,
               auctor nec turpis et, vehicula lobortis sem. Vivamus convallis mi
               sagittis eleifend laoreet. Praesent vitae venenatis enim. Nulla
@@ -78,23 +78,23 @@ const Main = () => {
             </Typography>
             <Grid container spacing={1} sx={{ marginTop: 1 }}>
               {[
-                'Our sign up is dead simple. We only require your basic company information',
-                'We support bulk uploading via SQL, integrations with most data storage products',
-                'Simply select where you\'d like to transfer your data',
-                'Our sign up is dead simple. We only require your basic company information',
-                'We support bulk uploading via SQL, integrations with most data storage products',
-                'Simply select where you\'d like to transfer your data',
+                "Our sign up is dead simple. We only require your basic company information",
+                "We support bulk uploading via SQL, integrations with most data storage products",
+                "Simply select where you'd like to transfer your data",
+                "Our sign up is dead simple. We only require your basic company information",
+                "We support bulk uploading via SQL, integrations with most data storage products",
+                "Simply select where you'd like to transfer your data",
               ].map((item, i) => (
                 <Grid item xs={12} key={i}>
                   <Box
                     component={ListItem}
                     disableGutters
-                    width={'auto'}
+                    width={"auto"}
                     padding={0}
                   >
                     <Box
                       component={ListItemAvatar}
-                      minWidth={'auto !important'}
+                      minWidth={"auto !important"}
                       marginRight={2}
                     >
                       <Box
@@ -125,10 +125,10 @@ const Main = () => {
             </Grid>
           </Box>
           <Box>
-            <Typography variant={'h5'} fontWeight={700} gutterBottom>
+            <Typography variant={"h5"} fontWeight={700} gutterBottom>
               Why to apply
             </Typography>
-            <Typography component={'p'}>
+            <Typography component={"p"}>
               We believe lorem ipsum dolor sit amet, consectetur adipiscing
               elit. Phasellus feugiat elit vitae enim lacinia semper. Cras nulla
               lectus, porttitor vitae urna iaculis, malesuada tincidunt lectus.
@@ -143,20 +143,20 @@ const Main = () => {
         <Grid item xs={12} md={4}>
           <Grid container spacing={isMd ? 4 : 2} direction="column">
             <Grid item xs={12} data-aos="fade-up">
-              <Box component={Card} bgcolor={'primary.main'}>
+              <Box component={Card} bgcolor={"primary.main"}>
                 <CardContent>
                   <Typography
                     variant="h6"
                     gutterBottom
                     color="text.primary"
-                    sx={{ color: 'common.white' }}
+                    sx={{ color: "common.white" }}
                   >
                     You like what you’re reading?
                   </Typography>
                   <Typography
                     variant="subtitle1"
                     color="text.secondary"
-                    sx={{ color: 'common.white' }}
+                    sx={{ color: "common.white" }}
                   >
                     Get free online programing tips and resources delivered
                     directly to your inbox.
@@ -176,7 +176,7 @@ const Main = () => {
                     size="large"
                     endIcon={
                       <Box
-                        component={'svg'}
+                        component={"svg"}
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"

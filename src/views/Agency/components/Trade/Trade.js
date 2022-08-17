@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 const Trade = () => {
   const theme = useTheme();
@@ -11,12 +11,12 @@ const Trade = () => {
     <Box>
       <Typography
         variant="h1"
-        align={'center'}
+        align={"center"}
         gutterBottom
         sx={{
           fontWeight: 900,
           color: theme.palette.common.white,
-          textTransform: 'uppercase',
+          textTransform: "uppercase",
         }}
       >
         Trade
@@ -25,14 +25,14 @@ const Trade = () => {
         variant="h6"
         component="p"
         color="text.primary"
-        align={'center'}
+        align={"center"}
         sx={{
           color: theme.palette.common.white,
         }}
       >
-        Buy and sell Estates, Avatars, Wearables and names in the
-        Virtualground Marketplace: stocking the very best digital goods
-        and paraphernalia backed by the ethereum blockchain.
+        Buy and sell Estates, Avatars, Wearables and names in the Virtualground
+        Marketplace: stocking the very best digital goods and paraphernalia
+        backed by the ethereum blockchain.
       </Typography>
     </Box>
   );

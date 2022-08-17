@@ -1,30 +1,30 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
-import { useTheme } from '@mui/material/styles';
+import React from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import { useTheme } from "@mui/material/styles";
 
 const mock = [
   {
-    media: 'https://assets.maccarianagency.com/backgrounds/img38.png',
-    title: 'Headphones',
-    price: '$450',
+    media: "https://assets.maccarianagency.com/backgrounds/img38.png",
+    title: "Headphones",
+    price: "$450",
   },
   {
-    media: 'https://assets.maccarianagency.com/backgrounds/img39.png',
-    title: 'Wireless headpohones',
-    price: '$280',
+    media: "https://assets.maccarianagency.com/backgrounds/img39.png",
+    title: "Wireless headpohones",
+    price: "$280",
   },
   {
-    media: 'https://assets.maccarianagency.com/backgrounds/img40.png',
-    title: 'Bluetooth headphones',
-    price: '$300',
+    media: "https://assets.maccarianagency.com/backgrounds/img40.png",
+    title: "Bluetooth headphones",
+    price: "$300",
   },
   {
-    media: 'https://assets.maccarianagency.com/backgrounds/img41.png',
-    title: 'Headphones',
-    price: '$280',
+    media: "https://assets.maccarianagency.com/backgrounds/img41.png",
+    title: "Headphones",
+    price: "$280",
   },
 ];
 
@@ -36,19 +36,19 @@ const LatestProducts = () => {
       <Box marginBottom={4}>
         <Typography
           sx={{
-            textTransform: 'uppercase',
-            fontWeight: 'medium',
+            textTransform: "uppercase",
+            fontWeight: "medium",
           }}
           gutterBottom
-          color={'secondary'}
-          align={'center'}
+          color={"secondary"}
+          align={"center"}
         >
           Products
         </Typography>
         <Typography
           variant="h4"
-          align={'center'}
-          data-aos={'fade-up'}
+          align={"center"}
+          data-aos={"fade-up"}
           gutterBottom
           sx={{
             fontWeight: 700,
@@ -58,31 +58,30 @@ const LatestProducts = () => {
         </Typography>
         <Typography
           variant="h6"
-          align={'center'}
-          color={'text.secondary'}
-          data-aos={'fade-up'}
+          align={"center"}
+          color={"text.secondary"}
+          data-aos={"fade-up"}
         >
-        {/*  Experience your music like never before. Buy music instruments &
-          accessories online.*/} 
+          {/*  Experience your music like never before. Buy music instruments &
+          accessories online.*/}
         </Typography>
-        <Box display="flex" justifyContent={'center'} marginTop={2}>
+        <Box display="flex" justifyContent={"center"} marginTop={2}>
           <Button variant="contained" color="primary" size="large">
             View all
           </Button>
         </Box>
       </Box>
       <Grid container spacing={4}>
-      <Typography
+        <Typography
           variant="h3"
-          align={'center'}
-          color={'text.secondary'}
-          data-aos={'fade-up'}
+          align={"center"}
+          color={"text.secondary"}
+          data-aos={"fade-up"}
         >
           coming soon...
         </Typography>
 
-
-      {/* 
+        {/* 
         {mock.map((item, i) => (
           <Grid
             item

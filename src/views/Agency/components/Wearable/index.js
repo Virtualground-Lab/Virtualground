@@ -1,1 +1,1 @@
-export { default } from './Wearable';
+export { default } from "./Wearable";

@@ -1,186 +1,183 @@
-import { useCallback, useEffect, useReducer, useState } from 'react';
-import WalletConnectProvider from '@walletconnect/web3-provider';
-import { providers } from 'ethers';
-import WalletLink from '@coinbase/wallet-sdk';
-import Web3Modal from 'web3modal';
-import { ellipseAddress, getChainData } from './lib/utilities';
-import {Account} from 'layouts/Main/components/Topbar/components';
-import Button from '@mui/material/Button';
+import { useCallback, useEffect, useReducer, useState } from "react";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import { providers } from "ethers";
+import WalletLink from "@coinbase/wallet-sdk";
+import Web3Modal from "web3modal";
+import { ellipseAddress, getChainData } from "./lib/utilities";
+import { Account } from "layouts/Main/components/Topbar/components";
+import Button from "@mui/material/Button";
 
-const INFURA_ID = 'a1f754ea74b24beea097773f476894e0';
+const INFURA_ID = "a1f754ea74b24beea097773f476894e0";
 
 const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider, // required
     options: {
-      infuraId: INFURA_ID // required
-    }
+      infuraId: INFURA_ID, // required
+    },
   },
-  'custom-walletlink': {
+  "custom-walletlink": {
     display: {
-      logo:
-        'https://play-lh.googleusercontent.com/PjoJoG27miSglVBXoXrxBSLveV6e3EeBPpNY55aiUUBM9Q1RCETKCOqdOkX2ZydqVf0',
-      name: 'Coinbase',
-      description: 'Connect to Coinbase Wallet (not Coinbase App)'
+      logo: "https://play-lh.googleusercontent.com/PjoJoG27miSglVBXoXrxBSLveV6e3EeBPpNY55aiUUBM9Q1RCETKCOqdOkX2ZydqVf0",
+      name: "Coinbase",
+      description: "Connect to Coinbase Wallet (not Coinbase App)",
     },
     options: {
-      appName: 'Coinbase', // Your app name
+      appName: "Coinbase", // Your app name
       networkUrl: `https://mainnet.infura.io/v3/${INFURA_ID}`,
-      chainId: 1
+      chainId: 1,
     },
     package: WalletLink,
     connector: async (_, options) => {
-      const { appName, networkUrl, chainId } = options
+      const { appName, networkUrl, chainId } = options;
       const walletLink = new WalletLink({
-        appName
-      })
-      const provider = walletLink.makeWeb3Provider(networkUrl, chainId)
-      await provider.enable()
-      return provider
-    }
-  }
-}
+        appName,
+      });
+      const provider = walletLink.makeWeb3Provider(networkUrl, chainId);
+      await provider.enable();
+      return provider;
+    },
+  },
+};
 
-let web3Modal
-if (typeof window !== 'undefined') {
+let web3Modal;
+if (typeof window !== "undefined") {
   web3Modal = new Web3Modal({
-    network: 'mainnet', // optional
+    network: "mainnet", // optional
     cacheProvider: true,
-    providerOptions // required
-  })
+    providerOptions, // required
+  });
 }
 
 const initialState = {
   provider: null,
   web3Provider: null,
   address: null,
-  chainId: null
-}
+  chainId: null,
+};
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'SET_WEB3_PROVIDER':
+    case "SET_WEB3_PROVIDER":
       return {
         ...state,
         provider: action.provider,
         web3Provider: action.web3Provider,
         address: action.address,
-        chainId: action.chainId
-      }
-    case 'SET_ADDRESS':
+        chainId: action.chainId,
+      };
+    case "SET_ADDRESS":
       return {
         ...state,
-        address: action.address
-      }
-    case 'SET_CHAIN_ID':
+        address: action.address,
+      };
+    case "SET_CHAIN_ID":
       return {
         ...state,
-        chainId: action.chainId
-      }
-    case 'RESET_WEB3_PROVIDER':
-      return initialState
+        chainId: action.chainId,
+      };
+    case "RESET_WEB3_PROVIDER":
+      return initialState;
     default:
-      throw new Error()
+      throw new Error();
   }
 }
 
-export const Login = ({connectBtnName}) => {
+export const Login = ({ connectBtnName }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-  const [state, dispatch] = useReducer(reducer, initialState)
-  const { provider, web3Provider, address, chainId } = state
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const { provider, web3Provider, address, chainId } = state;
 
   const connect = useCallback(async function () {
     // This is the initial `provider` that is returned when
     // using web3Modal to connect. Can be MetaMask or WalletConnect.
-    const provider = await web3Modal.connect()
+    const provider = await web3Modal.connect();
 
     // We plug the initial `provider` into ethers.js and get back
     // a Web3Provider. This will add on methods from ethers.js and
     // event listeners such as `.on()` will be different.
-    const web3Provider = new providers.Web3Provider(provider)
+    const web3Provider = new providers.Web3Provider(provider);
 
-    const signer = web3Provider.getSigner()
-    const address = await signer.getAddress()
+    const signer = web3Provider.getSigner();
+    const address = await signer.getAddress();
 
-    const network = await web3Provider.getNetwork()
+    const network = await web3Provider.getNetwork();
 
     dispatch({
-      type: 'SET_WEB3_PROVIDER',
+      type: "SET_WEB3_PROVIDER",
       provider,
       web3Provider,
       address,
-      chainId: network.chainId
-    })
-  }, [])
+      chainId: network.chainId,
+    });
+  }, []);
 
   const disconnect = useCallback(
     async function () {
-      await web3Modal.clearCachedProvider()
-      if (provider?.disconnect && typeof provider.disconnect === 'function') {
-        await provider.disconnect()
+      await web3Modal.clearCachedProvider();
+      if (provider?.disconnect && typeof provider.disconnect === "function") {
+        await provider.disconnect();
       }
       dispatch({
-        type: 'RESET_WEB3_PROVIDER'
-      })
+        type: "RESET_WEB3_PROVIDER",
+      });
       setAnchorEl(null);
     },
     [provider]
-  )
+  );
 
   // Auto connect to the cached provider
   useEffect(() => {
     if (web3Modal.cachedProvider) {
-      connect()
+      connect();
     }
-  }, [connect])
+  }, [connect]);
 
   // A `provider` should come with EIP-1193 events. We'll listen for those events
   // here so that when a user switches accounts or networks, we can update the
   // local React state with that new information.
   useEffect(() => {
     if (provider?.on) {
-      const handleAccountsChanged = accounts => {
+      const handleAccountsChanged = (accounts) => {
         // eslint-disable-next-line no-console
-        console.log('accountsChanged', accounts)
+        console.log("accountsChanged", accounts);
         dispatch({
-          type: 'SET_ADDRESS',
-          address: accounts[0]
-        })
-      }
+          type: "SET_ADDRESS",
+          address: accounts[0],
+        });
+      };
 
       // https://docs.ethers.io/v5/concepts/best-practices/#best-practices--network-changes
-      const handleChainChanged = _hexChainId => {
-        window.location.reload()
-      }
+      const handleChainChanged = (_hexChainId) => {
+        window.location.reload();
+      };
 
-      const handleDisconnect = error => {
+      const handleDisconnect = (error) => {
         // eslint-disable-next-line no-console
-        console.log('disconnect', error)
-        disconnect()
-      }
+        console.log("disconnect", error);
+        disconnect();
+      };
 
-      provider.on('accountsChanged', handleAccountsChanged)
-      provider.on('chainChanged', handleChainChanged)
-      provider.on('disconnect', handleDisconnect)
+      provider.on("accountsChanged", handleAccountsChanged);
+      provider.on("chainChanged", handleChainChanged);
+      provider.on("disconnect", handleDisconnect);
 
       // Subscription Cleanup
       return () => {
         if (provider.removeListener) {
-          provider.removeListener('accountsChanged', handleAccountsChanged)
-          provider.removeListener('chainChanged', handleChainChanged)
-          provider.removeListener('disconnect', handleDisconnect)
+          provider.removeListener("accountsChanged", handleAccountsChanged);
+          provider.removeListener("chainChanged", handleChainChanged);
+          provider.removeListener("disconnect", handleDisconnect);
         }
-      }
+      };
     }
-  }, [provider, disconnect])
+  }, [provider, disconnect]);
 
-  const chainData = getChainData(chainId)
-
-
+  const chainData = getChainData(chainId);
 
   return (
-    <div className='container'>
+    <div className="container">
       {/*   {address && (
         <div className='grid'>
          <div>
@@ -197,52 +194,47 @@ export const Login = ({connectBtnName}) => {
     */}
 
       {web3Provider ? (
-       <Account 
-         username='Choose Username'
-         photoURL='https://minimal-kit-react.vercel.app/static/mock-images/avatars/avatar_default.jpg'
-         address={ellipseAddress(address)}
-         handleLogout={disconnect}
-       />
-
-
+        <Account
+          username="Choose Username"
+          photoURL="https://minimal-kit-react.vercel.app/static/mock-images/avatars/avatar_default.jpg"
+          address={ellipseAddress(address)}
+          handleLogout={disconnect}
+        />
       ) : (
         <Button
-          variant='contained'
-          color='primary'
-          component='a'
-          target='blank'
+          variant="contained"
+          color="primary"
+          component="a"
+          target="blank"
           onClick={connect}
-          size='medium'
+          size="medium"
           fullWidth
         >
           {connectBtnName}
         </Button>
-
       )}
-
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
 
 const styles = {
   button: {
-    backgroundColor: 'heading_secondary',
-    borderRadius: '5px',
-    fontSize: ['13px', '14px', '15px'],
-    padding: ['14px 20px 13px', '14px 25px 13px', '12px 25px 12px'],
+    backgroundColor: "heading_secondary",
+    borderRadius: "5px",
+    fontSize: ["13px", "14px", "15px"],
+    padding: ["14px 20px 13px", "14px 25px 13px", "12px 25px 12px"],
     lineHeight: 1,
     fontWeight: 700,
-    display: 'inline-flex',
-    alignItems: 'center',
-    textTransform: 'uppercase',
-    color: '#ffffff',
-    ml: '48px',
-    transition: 'all 300ms ease',
-    '&:hover': {
+    display: "inline-flex",
+    alignItems: "center",
+    textTransform: "uppercase",
+    color: "#ffffff",
+    ml: "48px",
+    transition: "all 300ms ease",
+    "&:hover": {
       opacity: 0.8,
     },
-  }
+  },
 };
-

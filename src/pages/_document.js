@@ -1,12 +1,12 @@
 /* eslint-disable react/display-name */
-import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { CacheProvider } from '@emotion/react';
-import createCache from '@emotion/cache';
-import createEmotionServer from '@emotion/server/create-instance';
+import React from "react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
+import createEmotionServer from "@emotion/server/create-instance";
 
 const getCache = () => {
-  const cache = createCache({ key: 'css', prepend: true });
+  const cache = createCache({ key: "css", prepend: true });
   cache.compat = true;
   return cache;
 };
@@ -36,18 +36,12 @@ export default class MyDocument extends Document {
             property="og:image"
             content="https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fv.png?alt=media&token=b3d4aea4-4d66-44a4-bbaf-83e3a2ce3de3"
           />
-          <meta
-            property="og:title"
-            content="Virtualground"
-          />
+          <meta property="og:title" content="Virtualground" />
           <meta
             property="og:description"
             content="Explore virtual space to experience incredible scenes and structures. Choose your personalized space on Virtualground to organise meetings."
           />
-          <meta
-            property="og:url"
-            content="https://virtualground.it/"
-          />
+          <meta property="og:url" content="https://virtualground.it/" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
@@ -97,18 +91,19 @@ MyDocument.getInitialProps = async (ctx) => {
   ctx.renderPage = () =>
     originalRenderPage({
       // Take precedence over the CacheProvider in our custom _app.js
-      enhanceComponent: (Component) => (props) => (
-        <CacheProvider value={cache}>
-          <Component {...props} />
-        </CacheProvider>
-      ),
+      enhanceComponent: (Component) => (props) =>
+        (
+          <CacheProvider value={cache}>
+            <Component {...props} />
+          </CacheProvider>
+        ),
     });
 
   const initialProps = await Document.getInitialProps(ctx);
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
-      data-emotion={`${style.key} ${style.ids.join(' ')}`}
+      data-emotion={`${style.key} ${style.ids.join(" ")}`}
       key={style.key}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}

@@ -1,7 +1,7 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Main from 'layouts/Main';
-import Container from 'components/Container';
+import React from "react";
+import Box from "@mui/material/Box";
+import Main from "layouts/Main";
+import Container from "components/Container";
 import {
   Categories,
   FeaturedProducts,
@@ -13,7 +13,7 @@ import {
   Products,
   Differences,
   //Reviews,
-} from './components';
+} from "./components";
 
 const Marketplace = () => {
   return (
@@ -21,13 +21,13 @@ const Marketplace = () => {
       <Container>
         <Hero />
       </Container>
-      <Container paddingY={'0 !important'}>
+      <Container paddingY={"0 !important"}>
         <Overview />
       </Container>
       <Container>
         <Categories />
       </Container>
-      <Box bgcolor={'secondary.main'}>
+      <Box bgcolor={"secondary.main"}>
         <Container>
           <FeaturedProducts />
         </Container>
@@ -35,7 +35,7 @@ const Marketplace = () => {
       <Container>
         <Products />
       </Container>
-      <Box bgcolor={'alternate.main'}>
+      <Box bgcolor={"alternate.main"}>
         <Container>
           <News />
         </Container>
@@ -43,10 +43,10 @@ const Marketplace = () => {
       <Container>
         <LatestProducts />
       </Container>
-      <Container paddingTop={'0 !important'}>
+      <Container paddingTop={"0 !important"}>
         <Differences />
       </Container>
-     {/* <Box bgcolor={'alternate.main'}>
+      {/* <Box bgcolor={'alternate.main'}>
         <Container>
           <Reviews />
         </Container>

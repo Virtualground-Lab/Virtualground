@@ -1,10 +1,10 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
 
-import Main from 'layouts/Main';
-import Container from 'components/Container';
-import { Contact, Form, Hero, Newsletter } from './components';
+import Main from "layouts/Main";
+import Container from "components/Container";
+import { Contact, Form, Hero, Newsletter } from "./components";
 
 const ContactPage = () => {
   const theme = useTheme();
@@ -13,7 +13,7 @@ const ContactPage = () => {
     <Main>
       <Box
         sx={{
-          position: 'relative',
+          position: "relative",
           backgroundColor: theme.palette.alternate.main,
           backgroundImage: `linear-gradient(120deg, ${theme.palette.alternate.dark} 0%, ${theme.palette.background.paper} 100%)`,
           marginTop: -13,
@@ -25,7 +25,7 @@ const ContactPage = () => {
         </Container>
       </Box>
       <Contact />
-      <Box bgcolor={'alternate.main'}>
+      <Box bgcolor={"alternate.main"}>
         <Container>
           <Form />
         </Container>

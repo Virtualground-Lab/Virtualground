@@ -1,1 +1,1 @@
-export { default } from './BlogReachView';
+export { default } from "./BlogReachView";

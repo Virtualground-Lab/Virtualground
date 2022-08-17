@@ -1,12 +1,12 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import { useTheme } from '@mui/material/styles';
-import Divider from '@mui/material/Divider';
+import React from "react";
+import Box from "@mui/material/Box";
+import { useTheme } from "@mui/material/styles";
+import Divider from "@mui/material/Divider";
 
-import Main from 'layouts/Main';
-import Container from 'components/Container';
+import Main from "layouts/Main";
+import Container from "components/Container";
 
-import { Hero, Jobs, Newsletter, About, CompanyValues } from './components';
+import { Hero, Jobs, Newsletter, About, CompanyValues } from "./components";
 
 const Careers = () => {
   const theme = useTheme();
@@ -24,7 +24,7 @@ const Careers = () => {
           <About />
         </Container>
         <Box
-          component={'svg'}
+          component={"svg"}
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
@@ -41,15 +41,15 @@ const Careers = () => {
           ></path>
         </Box>
       </Box>
-      <Box bgcolor={'alternate.main'}>
+      <Box bgcolor={"alternate.main"}>
         <Container maxWidth={1000}>
           <Jobs />
         </Container>
-        <Container paddingTop={'0 !important'}>
+        <Container paddingTop={"0 !important"}>
           <Newsletter />
         </Container>
         <Box
-          component={'svg'}
+          component={"svg"}
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
           x="0px"

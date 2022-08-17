@@ -1,11 +1,11 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import { useTheme } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import React from "react";
+import Box from "@mui/material/Box";
+import { useTheme } from "@mui/material/styles";
+import Grid from "@mui/material/Grid";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
-import Main from 'layouts/Main';
-import Container from 'components/Container';
+import Main from "layouts/Main";
+import Container from "components/Container";
 import {
   Content,
   FooterNewsletter,
@@ -13,11 +13,11 @@ import {
   SidebarArticles,
   SidebarNewsletter,
   SimilarStories,
-} from './components';
+} from "./components";
 
 const BlogArticle = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
@@ -41,7 +41,7 @@ const BlogArticle = () => {
           </Grid>
         </Container>
         <Box
-          component={'svg'}
+          component={"svg"}
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
@@ -58,7 +58,7 @@ const BlogArticle = () => {
           ></path>
         </Box>
       </Box>
-      <Box bgcolor={'alternate.main'}>
+      <Box bgcolor={"alternate.main"}>
         <Container>
           <SimilarStories />
         </Container>
@@ -66,7 +66,7 @@ const BlogArticle = () => {
           <FooterNewsletter />
         </Container>
         <Box
-          component={'svg'}
+          component={"svg"}
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
           x="0px"

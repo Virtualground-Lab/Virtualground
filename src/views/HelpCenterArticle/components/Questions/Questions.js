@@ -1,62 +1,54 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { colors } from '@mui/material';
+import React from "react";
+import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { colors } from "@mui/material";
 
 const mock = [
   {
-    title: 'Authentication Issues',
-    subtitle: 'Issues related to logging in, out, or about multiple devices.',
-    text:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!',
+    title: "Authentication Issues",
+    subtitle: "Issues related to logging in, out, or about multiple devices.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!",
   },
   {
-    title: 'Why doesn’t my account stay logged in?',
-    subtitle: 'Issues related to authentication',
-    text:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!',
+    title: "Why doesn’t my account stay logged in?",
+    subtitle: "Issues related to authentication",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!",
   },
   {
-    title: 'I\'d like to renew but I am getting a 404 error.',
-    subtitle: 'Issues related to renewal',
-    text:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!',
+    title: "I'd like to renew but I am getting a 404 error.",
+    subtitle: "Issues related to renewal",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!",
   },
   {
-    title: 'Why can\'t I upgrade for free?',
-    subtitle: 'Payment gateway related issues',
-    text:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!',
+    title: "Why can't I upgrade for free?",
+    subtitle: "Payment gateway related issues",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!",
   },
   {
-    title: 'Why doesn\'t my account stay logged in?',
-    subtitle: 'Login session related issues',
-    text:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!',
+    title: "Why doesn't my account stay logged in?",
+    subtitle: "Login session related issues",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!",
   },
   {
-    title: 'Can I use referral code to decrease my monthly fees?',
-    subtitle: 'Referral bonuses and charging',
-    text:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!',
+    title: "Can I use referral code to decrease my monthly fees?",
+    subtitle: "Referral bonuses and charging",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!",
   },
   {
-    title: 'Authentication Issues',
-    subtitle: 'Issues related to logging in, out, or about multiple devices.',
-    text:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!',
+    title: "Authentication Issues",
+    subtitle: "Issues related to logging in, out, or about multiple devices.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!",
   },
   {
-    title: 'Why doesn’t my account stay logged in?',
-    subtitle: 'Issues related to authentication',
-    text:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!',
+    title: "Why doesn’t my account stay logged in?",
+    subtitle: "Issues related to authentication",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!",
   },
 ];
 
@@ -64,7 +56,7 @@ const Questions = () => {
   return (
     <Box>
       <Box marginBottom={4}>
-        <Box marginBottom={2} display={'flex'} alignItems={'center'}>
+        <Box marginBottom={2} display={"flex"} alignItems={"center"}>
           <Box
             component={Avatar}
             bgcolor={colors.green[100]}
@@ -74,7 +66,7 @@ const Questions = () => {
             height={60}
           >
             <Box
-              component={'svg'}
+              component={"svg"}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -90,33 +82,33 @@ const Questions = () => {
             </Box>
           </Box>
           <Box marginLeft={2}>
-            <Typography variant={'h6'} fontWeight={700} gutterBottom>
+            <Typography variant={"h6"} fontWeight={700} gutterBottom>
               Billing
             </Typography>
-            <Typography color={'text.secondary'}>
+            <Typography color={"text.secondary"}>
               Let’s try to fix your billing issues.
             </Typography>
           </Box>
         </Box>
-        <Box display={'flex'} alignItems={'center'}>
+        <Box display={"flex"} alignItems={"center"}>
           <Box
             paddingY={1 / 2}
             paddingX={1}
-            bgcolor={'secondary.main'}
+            bgcolor={"secondary.main"}
             borderRadius={2}
             marginRight={1}
           >
             <Typography
-              variant={'caption'}
+              variant={"caption"}
               fontWeight={700}
-              sx={{ color: 'common.black' }}
+              sx={{ color: "common.black" }}
             >
               8 answers
             </Typography>
           </Box>
           <Typography
-            color={'text.secondary'}
-            variant={'caption'}
+            color={"text.secondary"}
+            variant={"caption"}
             fontWeight={700}
           >
             Last updated 10 days ago
@@ -131,15 +123,15 @@ const Questions = () => {
             paddingY={1}
             elevation={0}
             sx={{
-              '&:first-of-type': {
+              "&:first-of-type": {
                 borderTopLeftRadius: 1,
                 borderTopRightRadius: 1,
               },
-              '&:not(:first-of-type):before': {
-                opacity: '1 !important',
-                display: 'block !important',
+              "&:not(:first-of-type):before": {
+                opacity: "1 !important",
+                display: "block !important",
               },
-              '&.Mui-expanded': {
+              "&.Mui-expanded": {
                 margin: 0,
               },
             }}
@@ -149,7 +141,7 @@ const Questions = () => {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id={`panel1a-header--${i}`}
-              padding={'0 !important'}
+              padding={"0 !important"}
             >
               <Box>
                 <Typography fontWeight={600}>{item.title}</Typography>
@@ -158,16 +150,16 @@ const Questions = () => {
             </Box>
             <AccordionDetails>
               <Typography>{item.text}</Typography>
-              <Box display={'flex'} justifyContent={'flex-end'}>
+              <Box display={"flex"} justifyContent={"flex-end"}>
                 <Box
                   component={Button}
                   color="primary"
                   size="small"
                   marginTop={2}
-                  variant={'outlined'}
+                  variant={"outlined"}
                   endIcon={
                     <Box
-                      component={'svg'}
+                      component={"svg"}
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
                       viewBox="0 0 20 20"
@@ -181,7 +173,7 @@ const Questions = () => {
                       />
                     </Box>
                   }
-                  sx={{ float: 'right' }}
+                  sx={{ float: "right" }}
                 >
                   Contact support team
                 </Box>

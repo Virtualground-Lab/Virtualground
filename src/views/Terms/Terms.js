@@ -1,12 +1,12 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 
-import Main from 'layouts/Main';
-import Container from 'components/Container';
-import { ContactCard, Content } from './components';
+import Main from "layouts/Main";
+import Container from "components/Container";
+import { ContactCard, Content } from "./components";
 
 const Terms = () => {
   const theme = useTheme();
@@ -17,9 +17,8 @@ const Terms = () => {
         <Box boxShadow={4} borderRadius={2}>
           <Box bgcolor={theme.palette.primary.main} borderRadius={2}>
             <Container paddingX={{ xs: 2, sm: 4 }}>
-              
               <Typography
-                variant={'h5'}
+                variant={"h5"}
                 gutterBottom
                 sx={{
                   fontWeight: 700,
@@ -30,7 +29,7 @@ const Terms = () => {
               </Typography>
             </Container>
             <Box
-              component={'svg'}
+              component={"svg"}
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
@@ -46,25 +45,25 @@ const Terms = () => {
             </Box>
           </Box>
           <Container
-            paddingTop={'0 !important'}
+            paddingTop={"0 !important"}
             paddingX={{ xs: 2, sm: 4 }}
-            position={'relative'}
+            position={"relative"}
             top={0}
           >
             <Box
               component={Grid}
               container
               spacing={4}
-              flexDirection={{ xs: 'column-reverse', md: 'row' }}
+              flexDirection={{ xs: "column-reverse", md: "row" }}
             >
               <Grid item xs={12} md={9}>
                 <Content />
               </Grid>
               <Grid item xs={12} md={3}>
                 <Box
-                  position={'sticky'}
+                  position={"sticky"}
                   top={theme.spacing(10)}
-                  className={'sticky'}
+                  className={"sticky"}
                 >
                   <ContactCard />
                 </Box>

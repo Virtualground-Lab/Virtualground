@@ -1,1 +1,1 @@
-export { default } from './HelpCenter';
+export { default } from "./HelpCenter";

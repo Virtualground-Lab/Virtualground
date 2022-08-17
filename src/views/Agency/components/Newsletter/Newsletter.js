@@ -1,32 +1,32 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import FormControl from '@mui/material/FormControl';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputAdornment from '@mui/material/InputAdornment';
-import { useTheme } from '@mui/material/styles';
+import React, { useState } from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import FormControl from "@mui/material/FormControl";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputAdornment from "@mui/material/InputAdornment";
+import { useTheme } from "@mui/material/styles";
 
-import Container from 'components/Container';
+import Container from "components/Container";
 
 const Newsletter = () => {
   const theme = useTheme();
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   return (
-    <Box bgcolor={'primary.main'} borderRadius={2}>
+    <Box bgcolor={"primary.main"} borderRadius={2}>
       <Container>
         <Box
-          display={'flex'}
-          flexDirection={'column'}
-          justifyContent={'center'}
-          alignItems={'center'}
+          display={"flex"}
+          flexDirection={"column"}
+          justifyContent={"center"}
+          alignItems={"center"}
         >
           <Box marginBottom={4}>
             <Typography
               variant="h4"
-              align={'center'}
-              data-aos={'fade-up'}
+              align={"center"}
+              data-aos={"fade-up"}
               gutterBottom
               sx={{
                 fontWeight: 700,
@@ -37,46 +37,46 @@ const Newsletter = () => {
             </Typography>
             <Typography
               variant="h6"
-              align={'center'}
+              align={"center"}
               sx={{
                 color: theme.palette.common.white,
               }}
-              data-aos={'fade-up'}
+              data-aos={"fade-up"}
             >
               Don't lose a chance to be among the first to know about our
               upcoming news and updates.
             </Typography>
           </Box>
-          <Box width={1} display={'flex'} justifyContent={'center'}>
+          <Box width={1} display={"flex"} justifyContent={"center"}>
             <FormControl
               fullWidth
               variant="outlined"
               sx={{
                 maxWidth: 400,
                 width: 1,
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': {
-                    borderColor: 'white',
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
                   },
-                  '&:hover fieldset': {
-                    borderColor: 'white',
+                  "&:hover fieldset": {
+                    borderColor: "white",
                   },
-                  '&.Mui-focused fieldset': {
-                    borderColor: 'white',
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
                   },
                 },
-                '& .MuiInputBase-root': {
-                  color: 'white',
+                "& .MuiInputBase-root": {
+                  color: "white",
                 },
-                '& .MuiInputAdornment-root svg': {
-                  color: 'white !important',
+                "& .MuiInputAdornment-root svg": {
+                  color: "white !important",
                 },
               }}
               data-aos="fade-up"
             >
               <OutlinedInput
                 value={email}
-                onChange={ e => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
                 endAdornment={
                   <InputAdornment position="end">
                     <svg

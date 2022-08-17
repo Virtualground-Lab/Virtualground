@@ -1,22 +1,21 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
 
-import Main from 'layouts/Main';
-import Container from 'components/Container';
-import { Faq, Contact, Hero } from './components';
+import Main from "layouts/Main";
+import Container from "components/Container";
+import { Faq, Contact, Hero } from "./components";
 
 const HelpCenter = () => {
   const theme = useTheme();
 
   return (
     <Main colorInvert={true}>
-     
       <Container>
         <Faq />
       </Container>
       <Box
-        position={'relative'}
+        position={"relative"}
         sx={{
           backgroundColor: theme.palette.alternate.main,
         }}
@@ -25,14 +24,14 @@ const HelpCenter = () => {
           <Contact />
         </Container>
         <Box
-          component={'svg'}
+          component={"svg"}
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
           viewBox="0 0 1920 100.1"
           sx={{
-            width: '100%',
+            width: "100%",
             marginBottom: theme.spacing(-1),
           }}
         >

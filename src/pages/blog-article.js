@@ -1,5 +1,5 @@
-import React from 'react';
-import BlogArticle from 'views/BlogArticle';
+import React from "react";
+import BlogArticle from "views/BlogArticle";
 
 const BlogArticlePage = () => {
   return <BlogArticle />;
