@@ -7,7 +7,7 @@ import Container from "components/Container";
 import {
   Welcome,
   Create,
-  Process,
+  Insights,
   Wearable,
   Trade,
   Estates,
@@ -189,7 +189,7 @@ const Home = () => {
         bgcolor={"alternate.main"}
       >
         <Container>
-          <Process />
+          <Insights />
         </Container>
       </Box>
       <Box
