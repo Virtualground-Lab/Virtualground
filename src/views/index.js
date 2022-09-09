@@ -1,5 +1,5 @@
 export { default as Faq } from "./Faq";
-export { default as Agency } from "./Agency";
+export { default as Home } from "./Home";
 export { default as Careers } from "./Careers";
 export { default as Marketplace } from "./Marketplace";
 export { default as CompanyTerms } from "./Terms";

@@ -5,7 +5,8 @@ import WalletLink from "@coinbase/wallet-sdk";
 import Web3Modal from "web3modal";
 import { ellipseAddress, getChainData } from "./lib/utilities";
 import { Account } from "layouts/Main/components/Topbar/components";
-import Button from "@mui/material/Button";
+import { IconButton, Button } from "@mui/material";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 
 const INFURA_ID = "a1f754ea74b24beea097773f476894e0";
 
@@ -201,17 +202,9 @@ export const Login = ({ connectBtnName }) => {
           handleLogout={disconnect}
         />
       ) : (
-        <Button
-          variant="contained"
-          color="primary"
-          component="a"
-          target="blank"
-          onClick={connect}
-          size="medium"
-          fullWidth
-        >
-          {connectBtnName}
-        </Button>
+        <IconButton color="primary" onClick={connect} size="medium">
+          <AccountBalanceWalletIcon fontSize="large" />
+        </IconButton>
       )}
     </div>
   );

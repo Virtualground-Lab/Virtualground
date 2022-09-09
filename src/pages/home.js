@@ -1,8 +1,8 @@
 import React from "react";
 import Home from "views/Home";
 
-const IndexPage = () => {
+const HomePage = () => {
   return <Home />;
 };
 
-export default IndexPage;
+export default HomePage;

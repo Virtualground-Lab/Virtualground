@@ -18,7 +18,7 @@ import {
   VideoSection,
 } from "./components";
 
-const Agency = () => {
+const Home = () => {
   useEffect(() => {
     const jarallaxInit = async () => {
       const jarallaxElems = document.querySelectorAll(".jarallax");
@@ -265,4 +265,4 @@ const Agency = () => {
   );
 };
 
-export default Agency;
+export default Home;
