@@ -12,45 +12,44 @@ import { useTheme } from "@mui/material/styles";
 const mock = [
   {
     media:
-      "https://images.unsplash.com/photo-1626379961798-54f819ee896a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dmlydHVhbCUyMHJlYWxpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+      "https://hbr.org/resources/images/article_assets/2022/05/R2204N_CEN.png",
+    eventLink: "https://hbr.org/2022/07/exploring-the-metaverse",
+    title: "Exploring the Metaverse",
+    blogBy: "Thomas Stackpole",
+    date: "Jul-Aug, 2022",
+    subtitle:
+      "With the world what it is these days, you can see why people might be itching for an alternate reality...",
+  },
+  {
+    media:
+      "https://hbr.org/resources/images/article_assets/2022/04/Apr22_05_1166494397.jpg",
+    eventLink: "https://hbr.org/2022/04/how-the-metaverse-could-change-work",
+    title: "How the Metaverse Could Change Work",
+    blogBy: "Mark Purdy",
+    date: "Apr 05, 2022",
+    subtitle:
+      "Imagine a world where you could have a beachside conversation with your colleagues...",
+  },
+  {
+    media:
+      "https://hbr.org/resources/images/article_assets/2020/09/Sep20_18_1171377963.jpg",
     eventLink:
-      "https://www.linkedin.com/video/event/urn:li:ugcPost:6919601072034439168/",
-    title: "Are we Metaverse - Ready?",
-    blogBy: "Photon Legal",
-    date: "Apr 26, 2022",
+      "https://hbr.org/2020/09/is-vr-the-future-of-corporate-training?ab=at_art_art_1x4_s02",
+    title: "Is VR the Future of Corporate Training?",
+    blogBy: "Jeremy Bailenson",
+    date: "Sep 18, 2020",
     subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Soldiers, surgeons, and astronauts have trained for decades in virtual reality (VR). People learn best by doing...",
   },
   {
     media:
-      "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHZpcnR1YWwlMjByZWFsaXR5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    eventLink:
-      "https://www.linkedin.com/video/event/urn:li:ugcPost:6897535166252998656/",
-    title: "Business in Metaverse",
-    blogBy: "Arpit Apoorva",
-    date: "Apr 30, 2022",
+      "https://hbr.org/resources/images/article_assets/2022/01/Jan22_03_1270015925.jpg",
+    eventLink: "https://hbr.org/2022/01/how-brands-can-enter-the-metaverse",
+    title: "How Brands Can Enter the Metaverse",
+    blogBy: "Janet Balis",
+    date: "Jan 03, 2022",
     subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    media:
-      "https://images.unsplash.com/photo-1538388149542-5e24932d11a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dmlydHVhbCUyMHJlYWxpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-    eventLink: "https://www.linkedin.com/events/6905146775913558016/",
-    title: "Privacy in Metaverse",
-    blogBy: "Tsaaro",
-    date: "Apr 29",
-    subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    media:
-      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dGFsa3N8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-    eventLink: "https://www.linkedin.com/events/6916623734611079168/",
-    title: "Why Every Brand Needs A Web3",
-    blogBy: "Aquent Australia",
-    date: "Apr 29, 2022",
-    subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "There are quite a few people who believe that the latest paradigm shift for the internet is already well...",
   },
 ];
 
