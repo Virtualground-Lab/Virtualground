@@ -36,7 +36,7 @@ const SidebarNav = ({ pages }) => {
           <NavItem items={pages} />
         </Box>
         <Box marginTop={2}>
-          <Login connectBtnName="Connect" />
+          <Login />
         </Box>
       </Box>
     </Box>

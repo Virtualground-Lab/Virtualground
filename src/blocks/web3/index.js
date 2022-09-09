@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useReducer, useState } from "react";
+import IconButton from "@mui/material/IconButton";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { providers } from "ethers";
 import WalletLink from "@coinbase/wallet-sdk";
 import Web3Modal from "web3modal";
 import { ellipseAddress, getChainData } from "./lib/utilities";
 import { Account } from "layouts/Main/components/Topbar/components";
-import { IconButton, Button } from "@mui/material";
+
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 
 const INFURA_ID = "a1f754ea74b24beea097773f476894e0";
@@ -202,8 +203,8 @@ export const Login = ({ connectBtnName }) => {
           handleLogout={disconnect}
         />
       ) : (
-        <IconButton color="primary" onClick={connect} size="medium">
-          <AccountBalanceWalletIcon fontSize="large" />
+        <IconButton onClick={connect} size="medium">
+          <AccountBalanceWalletIcon fontSize="large" color="primary" />
         </IconButton>
       )}
     </div>

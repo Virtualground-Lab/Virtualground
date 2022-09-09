@@ -6,14 +6,12 @@ import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import NoteAltOutlinedIcon from "@mui/icons-material/NoteAltOutlined";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import { colors } from "@mui/material";
 
 const mock = [
   {

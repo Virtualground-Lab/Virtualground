@@ -42,7 +42,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         </Box>
 
         <Box marginLeft={4}>
-          <Login connectBtnName="Connect" />
+          <Login />
         </Box>
       </Box>
 
