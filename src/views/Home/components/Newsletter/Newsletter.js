@@ -1,106 +1,132 @@
-/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import FormControl from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputAdornment from "@mui/material/InputAdornment";
 import { useTheme } from "@mui/material/styles";
-
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import DoneIcon from "@mui/icons-material/Done";
 import Container from "components/Container";
+import * as FirestoreService from "services/firestore";
+
+const validationSchema = yup.object({
+  email: yup
+    .string()
+    .trim()
+    .email("Please enter a valid email address")
+    .required("Email is required."),
+});
 
 const Newsletter = () => {
   const theme = useTheme();
-  const [email, setEmail] = useState("");
+  const [emailUploaded, setEmailUploaded] = useState(false);
+
+  const initialValues = {
+    email: "",
+  };
+  const onSubmit = (values) => {
+    FirestoreService.addEmail(values.email)
+      .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+        setEmailUploaded(true);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema: validationSchema,
+    onSubmit,
+  });
 
   return (
     <Box bgcolor={"primary.main"} borderRadius={2}>
       <Container>
-        <Box
-          display={"flex"}
-          flexDirection={"column"}
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <Box marginBottom={4}>
-            <Typography
-              variant="h4"
-              align={"center"}
-              data-aos={"fade-up"}
-              gutterBottom
-              sx={{
-                fontWeight: 700,
-                color: theme.palette.common.white,
-              }}
-            >
-              Subscribe for latest updates
-            </Typography>
-            <Typography
-              variant="h6"
-              align={"center"}
-              sx={{
-                color: theme.palette.common.white,
-              }}
-              data-aos={"fade-up"}
-            >
-              Don't lose a chance to be among the first to know about our
-              upcoming news and updates.
-            </Typography>
+        <form onSubmit={formik.handleSubmit}>
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            <Box marginBottom={4}>
+              <Typography
+                variant="h4"
+                align={"center"}
+                data-aos={"fade-up"}
+                gutterBottom
+                sx={{
+                  fontWeight: 700,
+                  color: theme.palette.common.white,
+                }}
+              >
+                Subscribe for latest updates
+              </Typography>
+              <Typography
+                variant="h6"
+                align={"center"}
+                sx={{
+                  color: theme.palette.common.white,
+                }}
+                data-aos={"fade-up"}
+              >
+                Don't lose a chance to be among the first to know about our
+                upcoming news and updates.
+              </Typography>
+            </Box>
+
+            <Box width={1} display={"flex"} justifyContent={"center"}>
+              <FormControl
+                fullWidth
+                variant="outlined"
+                sx={{
+                  maxWidth: 400,
+                  width: 1,
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "white",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "white",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "white",
+                    },
+                  },
+                  "& .MuiInputBase-root": {
+                    color: "white",
+                  },
+                  "& .MuiInputAdornment-root svg": {
+                    color: "white !important",
+                  },
+                }}
+                data-aos="fade-up"
+              >
+                <OutlinedInput
+                  name={"email"}
+                  placeholder="Enter your email"
+                  fullWidth
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  error={formik.touched.email && Boolean(formik.errors.email)}
+                  helperText={formik.touched.email && formik.errors.email}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      {emailUploaded ? (
+                        <DoneIcon fontSize="large" />
+                      ) : (
+                        <NotificationsIcon fontSize="large" />
+                      )}
+                    </InputAdornment>
+                  }
+                />
+              </FormControl>
+            </Box>
           </Box>
-          <Box width={1} display={"flex"} justifyContent={"center"}>
-            <FormControl
-              fullWidth
-              variant="outlined"
-              sx={{
-                maxWidth: 400,
-                width: 1,
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": {
-                    borderColor: "white",
-                  },
-                  "&:hover fieldset": {
-                    borderColor: "white",
-                  },
-                  "&.Mui-focused fieldset": {
-                    borderColor: "white",
-                  },
-                },
-                "& .MuiInputBase-root": {
-                  color: "white",
-                },
-                "& .MuiInputAdornment-root svg": {
-                  color: "white !important",
-                },
-              }}
-              data-aos="fade-up"
-            >
-              <OutlinedInput
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      width={24}
-                      height={24}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                      />
-                    </svg>
-                  </InputAdornment>
-                }
-                placeholder="Enter your email"
-              />
-            </FormControl>
-          </Box>
-        </Box>
+        </form>
       </Container>
     </Box>
   );
