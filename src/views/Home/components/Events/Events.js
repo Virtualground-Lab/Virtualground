@@ -18,45 +18,33 @@ import { colors } from "@mui/material";
 const mock = [
   {
     media:
-      "https://images.unsplash.com/photo-1626379961798-54f819ee896a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dmlydHVhbCUyMHJlYWxpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-    eventLink:
-      "https://www.linkedin.com/video/event/urn:li:ugcPost:6919601072034439168/",
-    title: "Are we Metaverse - Ready?",
-    eventBy: "Photon Legal",
-    time: "Apr 26, 2022, 5:30 PM - Apr 29, 2022, 6:30 PM (GMT+2)",
+      "https://images.unsplash.com/photo-1660905419327-9ef1573426ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80",
+    eventLink: "https://www.metaverse-xyz.com/",
+    title: "Metaverse XYZ",
+    eventBy: "Metaverse XYZ",
+    time: "Oct 14-15, 2022",
     place: "Online",
-    attendies: "105",
+    attendies: "",
   },
   {
     media:
-      "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHZpcnR1YWwlMjByZWFsaXR5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    eventLink:
-      "https://www.linkedin.com/video/event/urn:li:ugcPost:6897535166252998656/",
-    title: "Business in Metaverse",
-    eventBy: "Arpit Apoorva",
-    time: "Apr 30, 2022, 6:30 PM (GMT+2)",
+      "https://images.unsplash.com/photo-1566132127697-4524fea60007?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    eventLink: "https://gbaglobal.org/blockchain-infrastructure/",
+    title: "Blockchain & Infrastructure",
+    eventBy: "Brock Pierce",
+    time: "Sep 29-30, 2022",
     place: "Online",
-    attendies: "86",
+    attendies: "",
   },
   {
     media:
-      "https://images.unsplash.com/photo-1538388149542-5e24932d11a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dmlydHVhbCUyMHJlYWxpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-    eventLink: "https://www.linkedin.com/events/6905146775913558016/",
-    title: "Privacy in Metaverse",
-    eventBy: "Tsaaro",
-    time: "Apr 29, 2022, 6:30 AM - 7:30 AM (GMT+2)",
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1772&q=80",
+    eventLink: "https://www.blockchain-expo.com/",
+    title: "Blockchain Expo World",
+    eventBy: "Blockchain Expo World",
+    time: "Dec 1-2, 2022",
     place: "Online",
-    attendies: "270",
-  },
-  {
-    media:
-      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dGFsa3N8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-    eventLink: "https://www.linkedin.com/events/6916623734611079168/",
-    title: "Why Every Brand Needs A Web3 & Metaverse Strategy",
-    eventBy: "Aquent Australia",
-    time: "Apr 29, 2022, 2:00 AM - 3:00 AM (GMT+2)",
-    place: "Online",
-    attendies: "303",
+    attendies: "",
   },
 ];
 
@@ -288,36 +276,37 @@ const Spaces = () => {
                         </Typography>
                       </Box>
                     </Box>
-
-                    <Box
-                      display={"flex"}
-                      alignItems={"center"}
-                      justifyContent={"space-between"}
-                    >
-                      <Box display={"flex"} alignItems={"center"}>
-                        <Box
-                          component={"svg"}
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          width={24}
-                          height={24}
-                          marginRight={1}
-                        >
-                          <PeopleAltIcon />
+                    {item.attendies && (
+                      <Box
+                        display={"flex"}
+                        alignItems={"center"}
+                        justifyContent={"space-between"}
+                      >
+                        <Box display={"flex"} alignItems={"center"}>
+                          <Box
+                            component={"svg"}
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            width={24}
+                            height={24}
+                            marginRight={1}
+                          >
+                            <PeopleAltIcon />
+                          </Box>
+                          <Typography
+                            variant={"subtitle2"}
+                            color="text.secondary"
+                          >
+                            {item.attendies}
+                          </Typography>
                         </Box>
-                        <Typography
-                          variant={"subtitle2"}
-                          color="text.secondary"
-                        >
-                          {item.attendies} attendees
-                        </Typography>
+                        <Box display={"flex"} alignItems={"center"}>
+                          <Button href={item.eventLink}>Learn more</Button>
+                        </Box>
                       </Box>
-                      <Box display={"flex"} alignItems={"center"}>
-                        <Button href={item.eventLink}>Learn more</Button>
-                      </Box>
-                    </Box>
+                    )}
                   </CardContent>
                 </Box>
               </Box>
