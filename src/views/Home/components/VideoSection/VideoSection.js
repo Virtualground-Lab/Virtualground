@@ -1,12 +1,10 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Login from "blocks/web3";
+import Login from "blocks/Login";
 
 const VideoSection = () => {
   const theme = useTheme();
@@ -92,7 +90,7 @@ const VideoSection = () => {
               width="100%"
               height="100%"
               minHeight={320}
-              src="https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/videos%2Fvideo.mp4?alt=media&token=9bf2271e-efe7-4119-b2d4-0e3d07405ceb"
+              src="https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/videos%2FhomeVideo.mp4?alt=media&token=4a86c2e5-010e-48b7-800e-da06637715fa"
               frameBorder="0"
               allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
               boxShadow={4}

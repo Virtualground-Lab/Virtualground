@@ -9,4 +9,3 @@ export { default as Wearable } from "./Wearable";
 export { default as Trade } from "./Trade";
 export { default as Estates } from "./Estates";
 export { default as Contact } from "./Contact";
-export { default as Newsletter } from "./Newsletter";

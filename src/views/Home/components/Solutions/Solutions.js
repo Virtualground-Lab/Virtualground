@@ -17,9 +17,9 @@ const mock = [
     description:
       "Explore virtual environments to experience incredible scenes and structures. Choose your personalized space on Virtualground to organise events.",
     illustration:
-      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fplatform.svg?alt=media&token=52ce495e-25c8-4e80-b545-9810813e76a1",
+      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fplatform.webp?alt=media&token=5cb84327-d787-4573-8035-4e63731aed2c",
     illustrationDark:
-      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fplatform.svg?alt=media&token=52ce495e-25c8-4e80-b545-9810813e76a1",
+      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fplatform.webp?alt=media&token=5cb84327-d787-4573-8035-4e63731aed2c",
     color: colors.blue[200],
     route: "/platform",
   },
@@ -29,9 +29,9 @@ const mock = [
     description:
       "Buy, sell or rent Space, Avatar, Wearables and other Digital assets in Virtualground Marketplace backed by the ethereum blockchain.",
     illustration:
-      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fmarketplace.svg?alt=media&token=beddc94a-ec1c-42f4-b756-7d0591630dd2",
+      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fmarketplace.webp?alt=media&token=4ff254b4-e6e1-48df-afe8-50e3e7eb7767",
     illustrationDark:
-      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fmarketplace.svg?alt=media&token=beddc94a-ec1c-42f4-b756-7d0591630dd2",
+      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fmarketplace.webp?alt=media&token=4ff254b4-e6e1-48df-afe8-50e3e7eb7767",
     color: colors.purple[200],
     route: "/marketplace",
   },
@@ -41,9 +41,9 @@ const mock = [
     description:
       "With easy-to-use tools, the Builder makes world building fun. Create your own 3d models and deploy it on marketplace.  Let your creativity loose.",
     illustration:
-      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fbuilder.svg?alt=media&token=26e567a0-5460-482d-ba73-6887f266e912",
+      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fbuilder.webp?alt=media&token=351e90ce-e1d2-4bd0-94b7-3584d31a4dd3",
     illustrationDark:
-      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fbuilder.svg?alt=media&token=26e567a0-5460-482d-ba73-6887f266e912",
+      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fbuilder.webp?alt=media&token=351e90ce-e1d2-4bd0-94b7-3584d31a4dd3",
     color: colors.indigo[200],
     route: "/builder",
   },
@@ -53,9 +53,9 @@ const mock = [
     description:
       "Virtualground runs entirely in your web browser, just like a website, therefore there is no software to download.",
     illustration:
-      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fcompatibility.svg?alt=media&token=24ab31b4-9d37-4a5d-9558-48386bdc3122",
+      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fcompatibility.webp?alt=media&token=a9cfc2d4-a1b7-42b2-89a2-89ae7591ab6a",
     illustrationDark:
-      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fcompatibility.svg?alt=media&token=24ab31b4-9d37-4a5d-9558-48386bdc3122",
+      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fcompatibility.webp?alt=media&token=a9cfc2d4-a1b7-42b2-89a2-89ae7591ab6a",
     color: colors.green[200],
     route: "/platform",
   },

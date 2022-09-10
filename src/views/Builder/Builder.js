@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import Main from "layouts/Main";
-import { Welcome, Newsletter } from "./components";
+import Newsletter from "blocks/Newsletter";
 import Container from "components/Container";
+import { Welcome } from "./components";
 
 const Builder = () => {
   useEffect(() => {

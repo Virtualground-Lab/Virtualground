@@ -204,7 +204,7 @@ export const Login = ({ connectBtnName }) => {
         />
       ) : (
         <IconButton onClick={connect} size="medium">
-          <AccountBalanceWalletIcon fontSize="large" color="primary" />
+          <AccountBalanceWalletIcon fontSize="large" />
         </IconButton>
       )}
     </div>

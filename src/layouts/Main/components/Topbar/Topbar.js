@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { alpha, useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
-import Login from "blocks/web3";
+import Login from "blocks/Login";
 import { NavItem } from "./components";
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {

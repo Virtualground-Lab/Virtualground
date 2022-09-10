@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import NoSsr from "@mui/material/NoSsr";
 import Main from "layouts/Main";
 import Container from "components/Container";
+import Newsletter from "blocks/Newsletter";
 import {
   Welcome,
   Create,
@@ -12,7 +13,6 @@ import {
   Trade,
   Estates,
   Blog,
-  Newsletter,
   Solutions,
   Events,
   VideoSection,

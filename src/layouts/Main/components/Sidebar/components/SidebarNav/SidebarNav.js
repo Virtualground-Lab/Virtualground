@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import NavItem from "./components/NavItem";
-import Login from "blocks/web3";
+import Login from "blocks/Login";
 
 const SidebarNav = ({ pages }) => {
   const theme = useTheme();
