@@ -26,7 +26,7 @@ const providerOptions = {
     },
     options: {
       appName: "Coinbase", // Your app name
-      networkUrl: `https://mainnet.infura.io/v3/${infuraAPI}`,
+      networkUrl: `https://mainnet.infura.io/v3/${infuraApi}`,
       chainId: 1,
     },
     package: WalletLink,
