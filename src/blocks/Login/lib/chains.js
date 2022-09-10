@@ -15,6 +15,22 @@ const supportedChains = [
       balance: "",
     },
   },
+  {
+    name: "Binance Smart Chain",
+    short_name: "bsc",
+    chain: "smartchain",
+    network: "mainnet",
+    chain_id: 56,
+    network_id: 56,
+    rpc_url: "https://bsc-dataseed1.defibit.io/",
+    native_currency: {
+      symbol: "BNB",
+      name: "BNB",
+      decimals: "18",
+      contractAddress: "",
+      balance: "",
+    },
+  },
 
   {
     name: "Smart Chain - Testnet",
@@ -27,6 +43,23 @@ const supportedChains = [
     native_currency: {
       symbol: "BNB",
       name: "BNB",
+      decimals: "18",
+      contractAddress: "",
+      balance: "",
+    },
+  },
+
+  {
+    name: "Polygon Mumbai",
+    short_name: "matic",
+    chain: "smartchain",
+    network: "mumbai",
+    chain_id: 80001,
+    network_id: 80001,
+    rpc_url: "https://rpc-mumbai.maticvigil.com/",
+    native_currency: {
+      symbol: "MATIC",
+      name: "MATIC",
       decimals: "18",
       contractAddress: "",
       balance: "",
