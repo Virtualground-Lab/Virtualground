@@ -6,7 +6,6 @@ import WalletLink from "@coinbase/wallet-sdk";
 import Web3Modal from "web3modal";
 import { ellipseAddress, getChainData } from "./lib/utilities";
 import { Account } from "layouts/Main/components/Topbar/components";
-
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 
 const infuraApi = process.env.INFURA_API;

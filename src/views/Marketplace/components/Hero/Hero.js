@@ -1,5 +1,4 @@
 import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
@@ -70,7 +69,7 @@ const Hero = () => {
             borderRadius={2}
           >
             <Typography variant="body1" component="p">
-              $60 Apple Music gift card with purchase of select Beats products.*
+              
             </Typography>
           </Box>
           */}

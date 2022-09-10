@@ -5,3 +5,4 @@ export { default as Watch } from "./Watch";
 export { default as Stacy } from "./Stacy";
 export { default as ShoePair } from "./ShoePair";
 export { default as Doll } from "./Doll";
+export { default as Ground } from "./Ground";
