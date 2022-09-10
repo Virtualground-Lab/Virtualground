@@ -13,9 +13,9 @@ const infuraApi = process.env.INFURA_API;
 
 const providerOptions = {
   walletconnect: {
-    package: WalletConnectProvider, // required
+    package: WalletConnectProvider,
     options: {
-      infuraId: infuraApi, // required
+      infuraId: infuraApi,
     },
   },
   "custom-walletlink": {
@@ -180,21 +180,6 @@ export const Login = ({ connectBtnName }) => {
 
   return (
     <div className="container">
-      {/*   {address && (
-        <div className='grid'>
-         <div>
-              <p className='mb-1'>Network:</p>
-              <p>{chainData?.name}</p>
-            </div>
-            
-          <div>
-             <p className='mb-1'>Address:</p> 
-            <p>{ellipseAddress(address)}</p>
-          </div>
-        </div>
-      )}
-    */}
-
       {web3Provider ? (
         <Account
           username="Choose Username"
