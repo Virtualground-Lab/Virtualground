@@ -10,7 +10,7 @@ import { useTheme } from "@mui/material/styles";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import DoneIcon from "@mui/icons-material/Done";
 import Container from "components/Container";
-import * as FirestoreService from "services/firestore";
+import * as FirestoreService from "services/firebase";
 
 const validationSchema = yup.object({
   email: yup
