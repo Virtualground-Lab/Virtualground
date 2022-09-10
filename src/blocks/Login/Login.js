@@ -9,7 +9,7 @@ import { Account } from "layouts/Main/components/Topbar/components";
 
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 
-const INFURA_ID = "a1f754ea74b24beea097773f476894e0";
+const infuraApi = process.env.INFURA_API;
 
 const providerOptions = {
   walletconnect: {
@@ -26,7 +26,7 @@ const providerOptions = {
     },
     options: {
       appName: "Coinbase", // Your app name
-      networkUrl: `https://mainnet.infura.io/v3/${INFURA_ID}`,
+      networkUrl: `https://mainnet.infura.io/v3/${infuraAPI}`,
       chainId: 1,
     },
     package: WalletLink,
