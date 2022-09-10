@@ -15,7 +15,7 @@ const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider, // required
     options: {
-      infuraId: INFURA_ID, // required
+      infuraId: infuraApi, // required
     },
   },
   "custom-walletlink": {
