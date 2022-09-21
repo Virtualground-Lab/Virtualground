@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useReducer, useState } from "react";
 import IconButton from "@mui/material/IconButton";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { providers } from "ethers";
 import WalletLink from "@coinbase/wallet-sdk";
 import Web3Modal from "web3modal";
 import { ellipseAddress, getChainData } from "./lib/utilities";
 import { Account } from "layouts/Main/components/Topbar/components";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 
 const infuraApi = process.env.INFURA_API;
 
@@ -188,7 +188,7 @@ export const Login = ({ connectBtnName }) => {
         />
       ) : (
         <IconButton onClick={connect} size="medium">
-          <AccountBalanceWalletIcon fontSize="large" />
+          <AccountBalanceWalletIcon fontSize="large" color={"primary"} />
         </IconButton>
       )}
     </div>
@@ -196,23 +196,3 @@ export const Login = ({ connectBtnName }) => {
 };
 
 export default Login;
-
-const styles = {
-  button: {
-    backgroundColor: "heading_secondary",
-    borderRadius: "5px",
-    fontSize: ["13px", "14px", "15px"],
-    padding: ["14px 20px 13px", "14px 25px 13px", "12px 25px 12px"],
-    lineHeight: 1,
-    fontWeight: 700,
-    display: "inline-flex",
-    alignItems: "center",
-    textTransform: "uppercase",
-    color: "#ffffff",
-    ml: "48px",
-    transition: "all 300ms ease",
-    "&:hover": {
-      opacity: 0.8,
-    },
-  },
-};

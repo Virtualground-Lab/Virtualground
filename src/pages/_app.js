@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Head from "next/head";
 
 import Page from "../components/Page";
+import { WalletProvider, CHAIN_TYPES } from "blocks/Web3Auth/config";
 
 import "react-lazy-load-image-component/src/effects/blur.css";
 import "slick-carousel/slick/slick.css";
@@ -20,9 +21,11 @@ export default function App({ Component, pageProps }) {
         />
         <title>Virtualground</title>
       </Head>
-      <Page>
-        <Component {...pageProps} />
-      </Page>
+      <WalletProvider chainType={CHAIN_TYPES.mumbai}>
+        <Page>
+          <Component {...pageProps} />
+        </Page>
+      </WalletProvider>
     </React.Fragment>
   );
 }

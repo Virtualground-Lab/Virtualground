@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import NavItem from "./components/NavItem";
-import Login from "blocks/Login";
 
 const SidebarNav = ({ pages }) => {
   const theme = useTheme();
@@ -34,9 +33,6 @@ const SidebarNav = ({ pages }) => {
       <Box paddingX={2} paddingY={2}>
         <Box>
           <NavItem items={pages} />
-        </Box>
-        <Box marginTop={2}>
-          <Login />
         </Box>
       </Box>
     </Box>
