@@ -38,12 +38,14 @@ const VideoSection = () => {
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="text.secondary">
-              Our mission is to provide a decentralized virtual space where
-              anyone can join and interact with each other. Each 3d environment
-              is isolated with another and designed with better graphics,
-              optimized for faster user interaction and loading time.
+              Virtualground is virtual 3d environment that is fully
+              decentralized, completely anonymous and reasonably accessible to
+              all. Each environment is isolated from another and designed with
+              better graphics optimized for a faster experience with minimal
+              loading times.
             </Typography>
           </Box>
+          {/*
           <Box
             display="flex"
             flexDirection={"column"}
@@ -51,7 +53,7 @@ const VideoSection = () => {
           >
             <Box marginBottom={2}>
               <Typography variant="body1" component="p">
-                Join over 1000 users for our services.
+                Join our newsletter to get the latest news and updates from us.
               </Typography>
             </Box>
             <Box
@@ -73,6 +75,7 @@ const VideoSection = () => {
               </Box>
             </Box>
           </Box>
+          */}
         </Box>
       </Grid>
       <Grid item xs={12} md={6}>

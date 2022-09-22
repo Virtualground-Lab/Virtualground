@@ -30,7 +30,7 @@ const Estates = () => {
           color: theme.palette.common.white,
         }}
       >
-        Buy, create or sell properties
+        Buy, create or sell virtual properties.
       </Typography>
     </Box>
   );

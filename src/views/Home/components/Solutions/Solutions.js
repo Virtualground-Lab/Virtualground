@@ -15,7 +15,7 @@ const mock = [
     alt: "virtualground",
     title: "Platform",
     description:
-      "Explore virtual environments to experience incredible scenes and structures. Choose your personalized space on Virtualground to organise events.",
+      "Experience incredible scenes and structures. Our creators have created immersive virtual environments for various situations such as a wedding, corporate event, or just hanging out with friends. All of our amazing spaces are made to be customized to your needs, so you can build your own fantasy environment tailored specifically to you!",
     illustration:
       "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fplatform.webp?alt=media&token=5cb84327-d787-4573-8035-4e63731aed2c",
     illustrationDark:
@@ -27,7 +27,7 @@ const mock = [
     alt: "virtualground marketplace",
     title: "Marketplace",
     description:
-      "Buy, sell or rent Space, Avatar, Wearables and other Digital assets in Virtualground Marketplace backed by the ethereum blockchain.",
+      "Secure and transparent infrastructure running on blockchain techonolgy for the global market of digital assets. Buy, sell or rent digital assets or properties in a fun and interactive environment.",
     illustration:
       "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fmarketplace.webp?alt=media&token=4ff254b4-e6e1-48df-afe8-50e3e7eb7767",
     illustrationDark:
@@ -39,7 +39,7 @@ const mock = [
     alt: "virtualground builder",
     title: "Builder",
     description:
-      "With easy-to-use tools, the Builder makes world building fun. Create your own 3d models and deploy it on marketplace.  Let your creativity loose.",
+      "Use the builder to create your own 3d models and deploy it on the marketplace. Let your imagination free, let's leave nothing of your creativity untested - with the Builder tool.",
     illustration:
       "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fbuilder.webp?alt=media&token=351e90ce-e1d2-4bd0-94b7-3584d31a4dd3",
     illustrationDark:
@@ -51,7 +51,7 @@ const mock = [
     alt: "virtualground compatibility",
     title: "Compatibility",
     description:
-      "Virtualground runs entirely in your web browser, just like a website, therefore there is no software to download.",
+      "Virtualground runs entirely in your web browser, just like a website. There is no software to download and install. All you need is an internet connection. We recommend using a VR headset for the best experience possible.",
     illustration:
       "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fcompatibility.webp?alt=media&token=a9cfc2d4-a1b7-42b2-89a2-89ae7591ab6a",
     illustrationDark:

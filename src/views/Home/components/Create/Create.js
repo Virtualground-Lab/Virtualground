@@ -30,10 +30,9 @@ const Create = () => {
           color: theme.palette.common.white,
         }}
       >
-        Create scenes, artworks, challenges and more, using the simple Builder
-        tool, then take part in events to win prizes. For more experienced
-        creators, the SDK provides the tools to fill the world with social games
-        and applications.
+        With the Builders tool and SDK, you can create scenes, artworks,
+        challenges and more. If you have more experience, you can use the SDK to
+        add games and applications to our open-ended world.
       </Typography>
     </Box>
   );

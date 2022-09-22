@@ -205,7 +205,7 @@ const Home = () => {
         <Box
           className={"jarallax-img"}
           sx={styles(
-            "https://cdn.pixabay.com/photo/2016/09/04/12/38/living-room-1643855_1280.jpg"
+            "https://images.unsplash.com/photo-1537726235470-8504e3beef77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
           )}
         />
         <Container>

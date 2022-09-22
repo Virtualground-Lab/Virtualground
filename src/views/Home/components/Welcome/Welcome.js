@@ -57,12 +57,13 @@ const Welcome = () => {
             alignItems={{ xs: "stretched", sm: "flex-start" }}
           >
             <Button
+              disabled
               variant="contained"
               color="primary"
               size="large"
               fullWidth={isMd ? false : true}
             >
-              Explore
+              Explore [coming soon]
             </Button>
             <Box
               component={Button}

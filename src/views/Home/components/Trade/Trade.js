@@ -30,9 +30,10 @@ const Trade = () => {
           color: theme.palette.common.white,
         }}
       >
-        Buy and sell Estates, Avatars, Wearables and names in the Virtualground
-        Marketplace: stocking the very best digital goods and paraphernalia
-        backed by the ethereum blockchain.
+        Decentralized marketplace where you can buy and sell collectibles,
+        avatars, wearables, and items in the virtual universe. The blockchain
+        based system allows for fast and fair transactions while protecting your
+        items from fraud.
       </Typography>
     </Box>
   );
