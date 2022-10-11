@@ -41,3 +41,12 @@ export const addBlogNewsletterEmail = (email) => {
     email: email,
   });
 };
+
+export const addUser = (walletAddress, name) => {
+  const userColRef = collection(db, "users");
+  return addDoc(userColRef, {
+    created: serverTimestamp(),
+    walletAddress: walletAddress,
+    name: name,
+  });
+};

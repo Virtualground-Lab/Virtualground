@@ -23,7 +23,7 @@ const validationSchema = yup.object({
     .required("Email is required."),
 });
 
-const Newsletter = () => {
+const Newsletter = ({ title, subtitle, successMessage }) => {
   const theme = useTheme();
   const [emailUploaded, setEmailUploaded] = useState(false);
 
@@ -67,7 +67,7 @@ const Newsletter = () => {
                   color: theme.palette.common.white,
                 }}
               >
-                Subscribe for latest updates
+                {title}
               </Typography>
               <Typography
                 variant="h6"
@@ -77,8 +77,7 @@ const Newsletter = () => {
                 }}
                 data-aos={"fade-up"}
               >
-                Don't lose a chance to be among the first to know about our
-                upcoming news and updates.
+                {subtitle}
               </Typography>
             </Box>
 
@@ -146,8 +145,7 @@ const Newsletter = () => {
               }
               sx={{ mt: 1 }}
             >
-              Thank you! Your message has been sent. We'll get back to you in
-              1-2 business days.
+              {successMessage}
             </Alert>
           </Collapse>
         </Box>

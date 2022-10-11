@@ -258,7 +258,13 @@ const Home = () => {
         id="virtualground-item--js-scroll"
       >
         <Container>
-          <Newsletter />
+          <Newsletter
+            title=" Subscribe for latest updates"
+            subtitle={
+              "Don't lose a chance to be among the first to know about our upcoming news and updates."
+            }
+            successMessage={"You have subscribed successfully"}
+          />
         </Container>
       </Box>
     </Main>

@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-// @mui
 import Link from "@mui/material/Link";
 import { alpha } from "@mui/material/styles";
 import {
@@ -11,11 +10,8 @@ import {
   Avatar,
   IconButton,
 } from "@mui/material";
-import HomeIcon from "@mui/icons-material/Home";
-// components
 import MenuPopover from "components/MenuPopover";
-
-// ----------------------------------------------------------------------
+import Gravatar from "react-gravatar";
 
 const MENU_OPTIONS = [
   {
@@ -31,8 +27,6 @@ const MENU_OPTIONS = [
     route: "/account",
   },
 ];
-
-// ----------------------------------------------------------------------
 
 export default function AccountPopover({
   username,
