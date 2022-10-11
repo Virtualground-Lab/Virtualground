@@ -1,5 +1,5 @@
 import React from "react";
-import NotFoundCover from "views/NotFoundCover";
+import NotFoundCover from "src/views/NotFound";
 
 const FourOFourPage = () => {
   return <NotFoundCover />;

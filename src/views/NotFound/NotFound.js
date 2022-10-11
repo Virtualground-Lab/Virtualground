@@ -10,7 +10,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Main from "layouts/Main";
 import Container from "components/Container";
 
-const NotFoundCover = () => {
+const NotFound = () => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
@@ -159,4 +159,4 @@ const NotFoundCover = () => {
   );
 };
 
-export default NotFoundCover;
+export default NotFound;

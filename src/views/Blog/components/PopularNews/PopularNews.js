@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+//import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
+//import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Chip from "@mui/material/Chip";
-import Button from "@mui/material/Button";
+//import Card from "@mui/material/Card";
+//import CardContent from "@mui/material/CardContent";
+//import Chip from "@mui/material/Chip";
+//import Button from "@mui/material/Button";
 
 const mock = [
   {
