@@ -48,7 +48,7 @@ const Welcome = () => {
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="text.secondary">
-              We offer decentralized platform to organise virtual events
+              We provide tailored virtual space based on your needs.
             </Typography>
           </Box>
           <Box

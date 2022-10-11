@@ -22,3 +22,22 @@ export const addEmail = (email) => {
     email: email,
   });
 };
+
+export const addContactMessage = (firstName, lastName, email, message) => {
+  const emailColRef = collection(db, "contact-message");
+  return addDoc(emailColRef, {
+    created: serverTimestamp(),
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    message: message,
+  });
+};
+
+export const addBlogNewsletterEmail = (email) => {
+  const emailColRef = collection(db, "blog-newsletter");
+  return addDoc(emailColRef, {
+    created: serverTimestamp(),
+    email: email,
+  });
+};

@@ -7,7 +7,7 @@ import Container from "components/Container";
 import Newsletter from "blocks/Newsletter";
 import {
   Welcome,
-  Create,
+  Explore,
   Insights,
   Wearable,
   Trade,
@@ -82,7 +82,7 @@ const Home = () => {
                   fill="currentColor"
                   width={{ xs: 30, sm: 40 }}
                   height={{ xs: 30, sm: 40 }}
-                  onClick={() => scrollTo("agency__portfolio-item--js-scroll")}
+                  onClick={() => scrollTo("virtualground-item--js-scroll")}
                   sx={{ cursor: "pointer" }}
                 >
                   <path
@@ -105,7 +105,7 @@ const Home = () => {
         minHeight={"100vh"}
         display={"flex"}
         alignItems={"center"}
-        id="agency__portfolio-item--js-scroll"
+        id="virtualground-item--js-scroll"
       >
         <Container>
           <Solutions />
@@ -120,7 +120,7 @@ const Home = () => {
         minHeight={"100vh"}
         display={"flex"}
         alignItems={"center"}
-        id="agency__portfolio-item--js-scroll"
+        id="virtualground-item--js-scroll"
       >
         <Container>
           <VideoSection />
@@ -135,7 +135,7 @@ const Home = () => {
         minHeight={"100vh"}
         display={"flex"}
         alignItems={"center"}
-        id="agency__portfolio-item--js-scroll"
+        id="virtualground-item--js-scroll"
       >
         <Box
           className={"jarallax-img"}
@@ -144,7 +144,7 @@ const Home = () => {
           )}
         />
         <Container>
-          <Create />
+          <Explore />
         </Container>
       </Box>
 
@@ -156,7 +156,7 @@ const Home = () => {
         minHeight={"100vh"}
         display={"flex"}
         alignItems={"center"}
-        id="agency__portfolio-item--js-scroll"
+        id="virtualground-item--js-scroll"
       >
         <Container>
           <Events />
@@ -200,7 +200,7 @@ const Home = () => {
         minHeight={"100vh"}
         display={"flex"}
         alignItems={"center"}
-        id="agency__portfolio-item--js-scroll"
+        id="virtualground-item--js-scroll"
       >
         <Box
           className={"jarallax-img"}
@@ -221,7 +221,7 @@ const Home = () => {
         minHeight={"100vh"}
         display={"flex"}
         alignItems={"center"}
-        id="agency__portfolio-item--js-scroll"
+        id="virtualground-item--js-scroll"
       >
         <Container>
           <Blog />
@@ -236,7 +236,7 @@ const Home = () => {
         minHeight={"100vh"}
         display={"flex"}
         alignItems={"center"}
-        id="agency__portfolio-item--js-scroll"
+        id="virtualground-item--js-scroll"
       >
         <Box
           className={"jarallax-img"}
@@ -255,7 +255,7 @@ const Home = () => {
         position={"relative"}
         display={"flex"}
         alignItems={"center"}
-        id="agency__portfolio-item--js-scroll"
+        id="virtualground-item--js-scroll"
       >
         <Container>
           <Newsletter />

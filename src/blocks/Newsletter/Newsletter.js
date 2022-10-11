@@ -5,10 +5,13 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import FormControl from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
-import InputAdornment from "@mui/material/InputAdornment";
 import { useTheme } from "@mui/material/styles";
+import InputAdornment from "@mui/material/InputAdornment";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import DoneIcon from "@mui/icons-material/Done";
+import Collapse from "@mui/material/Collapse";
+import Alert from "@mui/material/Alert";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 import Container from "components/Container";
 import * as FirestoreService from "services/firebase";
 
@@ -32,6 +35,7 @@ const Newsletter = () => {
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
         setEmailUploaded(true);
+        formik.resetForm();
       })
       .catch((error) => console.log(error));
   };
@@ -79,54 +83,74 @@ const Newsletter = () => {
             </Box>
 
             <Box width={1} display={"flex"} justifyContent={"center"}>
-              <FormControl
-                fullWidth
-                variant="outlined"
-                sx={{
-                  maxWidth: 400,
-                  width: 1,
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: "white",
-                    },
-                    "&:hover fieldset": {
-                      borderColor: "white",
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: "white",
-                    },
-                  },
-                  "& .MuiInputBase-root": {
-                    color: "white",
-                  },
-                  "& .MuiInputAdornment-root svg": {
-                    color: "white !important",
-                  },
-                }}
-                data-aos="fade-up"
-              >
-                <OutlinedInput
-                  name={"email"}
-                  placeholder="Enter your email"
+              {!emailUploaded && (
+                <FormControl
                   fullWidth
-                  value={formik.values.email}
-                  onChange={formik.handleChange}
-                  error={formik.touched.email && Boolean(formik.errors.email)}
-                  helperText={formik.touched.email && formik.errors.email}
-                  endAdornment={
-                    <InputAdornment position="end">
-                      {emailUploaded ? (
-                        <DoneIcon fontSize="large" />
-                      ) : (
+                  variant="outlined"
+                  sx={{
+                    maxWidth: 400,
+                    width: 1,
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "white",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "white",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "white",
+                      },
+                    },
+                    "& .MuiInputBase-root": {
+                      color: "white",
+                    },
+                    "& .MuiInputAdornment-root svg": {
+                      color: "white !important",
+                    },
+                  }}
+                  data-aos="fade-up"
+                >
+                  <OutlinedInput
+                    name={"email"}
+                    placeholder="Enter your email"
+                    fullWidth
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                    error={formik.touched.email && Boolean(formik.errors.email)}
+                    helperText={formik.touched.email && formik.errors.email}
+                    endAdornment={
+                      <InputAdornment position="end">
                         <NotificationsIcon fontSize="large" />
-                      )}
-                    </InputAdornment>
-                  }
-                />
-              </FormControl>
+                      </InputAdornment>
+                    }
+                  />
+                </FormControl>
+              )}
             </Box>
           </Box>
         </form>
+        <Box width={1} display={"flex"} justifyContent={"center"}>
+          <Collapse in={emailUploaded}>
+            <Alert
+              severity="success"
+              color="primary"
+              action={
+                <IconButton aria-label="close" size="small">
+                  <CloseIcon
+                    fontSize="inherit"
+                    onClick={() => {
+                      setEmailUploaded(false);
+                    }}
+                  />
+                </IconButton>
+              }
+              sx={{ mt: 1 }}
+            >
+              Thank you! Your message has been sent. We'll get back to you in
+              1-2 business days.
+            </Alert>
+          </Collapse>
+        </Box>
       </Container>
     </Box>
   );

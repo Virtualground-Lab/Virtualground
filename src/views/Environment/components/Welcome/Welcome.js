@@ -39,7 +39,8 @@ const Welcome = () => {
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="text.secondary">
-              Subscribe to our newsletter to keep updated
+              We are working hard to deliver 3d environments as soon as
+              possible. Please subscribe to our newsletter to keep updated.
             </Typography>
           </Box>
         </Box>

@@ -21,7 +21,7 @@ const mock = [
     illustrationDark:
       "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fplatform.webp?alt=media&token=5cb84327-d787-4573-8035-4e63731aed2c",
     color: colors.blue[200],
-    route: "/platform",
+    route: "/environments",
   },
   {
     alt: "virtualground marketplace",
@@ -36,16 +36,16 @@ const mock = [
     route: "/marketplace",
   },
   {
-    alt: "virtualground builder",
-    title: "Builder",
+    alt: "virtualground security",
+    title: "Security",
     description:
-      "Use the builder to create your own 3d models and deploy it on the marketplace. Let your imagination free, let's leave nothing of your creativity untested - with the Builder tool.",
+      "Virtualground uses the Ethereum blockchain to secure data. All transactions are processed through the Ethereum network.",
     illustration:
-      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fbuilder.webp?alt=media&token=351e90ce-e1d2-4bd0-94b7-3584d31a4dd3",
+      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fprivacy.svg?alt=media&token=3a4745a0-fd46-4235-92e5-21e0b43ae345",
     illustrationDark:
-      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fwebp%2Fbuilder.webp?alt=media&token=351e90ce-e1d2-4bd0-94b7-3584d31a4dd3",
+      "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fprivacy.svg?alt=media&token=3a4745a0-fd46-4235-92e5-21e0b43ae345",
     color: colors.indigo[200],
-    route: "/builder",
+    route: "/privacy",
   },
   {
     alt: "virtualground compatibility",

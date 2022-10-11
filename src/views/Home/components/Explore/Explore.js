@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-const Create = () => {
+const Explore = () => {
   const theme = useTheme();
 
   return (
@@ -19,7 +19,7 @@ const Create = () => {
           textTransform: "uppercase",
         }}
       >
-        Create
+        Explore
       </Typography>
       <Typography
         variant="h6"
@@ -30,12 +30,12 @@ const Create = () => {
           color: theme.palette.common.white,
         }}
       >
-        With the Builders tool and SDK, you can create scenes, artworks,
-        challenges and more. If you have more experience, you can use the SDK to
-        add games and applications to our open-ended world.
+        You can choose from a variety of 3D environments tailored for different
+        activities, such as having fun with friends or colleagues or holding
+        business meetings and much more.
       </Typography>
     </Box>
   );
 };
 
-export default Create;
+export default Explore;

@@ -4,8 +4,8 @@ const pages = [
     href: "/marketplace",
   },
   {
-    title: "Builder",
-    href: "/builder",
+    title: "Environments",
+    href: "/environments",
   },
   {
     title: "Events",

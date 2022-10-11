@@ -51,8 +51,9 @@ const PopularNews = () => {
             fontWeight: 700,
           }}
         >
-          The most popular news
+          No blogs added yet
         </Typography>
+        {/* 
         <Typography
           variant="h6"
           color={"text.secondary"}
@@ -63,7 +64,9 @@ const PopularNews = () => {
           <br />
           theFront is an ever evolving theme with regular updates.
         </Typography>
+        */}
       </Box>
+      {/* 
       <Grid container spacing={4}>
         {mock.map((item, i) => (
           <Grid key={i} item xs={12}>
@@ -179,6 +182,7 @@ const PopularNews = () => {
           </Grid>
         ))}
       </Grid>
+                  */}
     </Box>
   );
 };

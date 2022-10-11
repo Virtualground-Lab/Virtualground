@@ -1,48 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import { useFormik } from "formik";
-import * as yup from "yup";
+import PropTypes from "prop-types";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-const validationSchema = yup.object({
-  email: yup
-    .string()
-    .trim()
-    .email("Please enter a valid email address")
-    .required("Email is required."),
-  password: yup
-    .string()
-    .required("Please specify your password")
-    .min(8, "The password should have at minimum length of 8"),
-});
-
-const SidebarNewsletter = () => {
+const SidebarNewsletter = ({ buttonFunc }) => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
-
-  const initialValues = {
-    email: "",
-    password: "",
-  };
-
-  const onSubmit = (values) => {
-    return values;
-  };
-
-  const formik = useFormik({
-    initialValues,
-    validationSchema: validationSchema,
-    onSubmit,
   });
 
   return (
@@ -59,7 +29,7 @@ const SidebarNewsletter = () => {
               <Box
                 component={"img"}
                 src={
-                  "https://assets.maccarianagency.com/svg/illustrations/drawkit-illustration2.svg"
+                  "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Fchat.svg?alt=media&token=ad0ef0ba-72aa-48bc-ae4c-e5492d92888f"
                 }
                 width={1}
                 height={1}
@@ -81,92 +51,33 @@ const SidebarNewsletter = () => {
           >
             Please login to comment
           </Typography>
-          <form onSubmit={formik.handleSubmit}>
-            <Grid container spacing={2}>
-              <Grid item xs={12}>
-                <Typography variant={"subtitle2"} sx={{ marginBottom: 2 }}>
-                  Enter your email
-                </Typography>
-                <TextField
-                  label="Email *"
-                  variant="outlined"
-                  name={"email"}
-                  fullWidth
-                  value={formik.values.email}
-                  onChange={formik.handleChange}
-                  error={formik.touched.email && Boolean(formik.errors.email)}
-                  helperText={formik.touched.email && formik.errors.email}
-                />
-              </Grid>
-              <Grid item xs={12}>
+          <Box width={1} display={"flex"}>
+            <Button
+              size={"large"}
+              sx={{ marginTop: 1, marginBottom: 2 }}
+              onClick={buttonFunc}
+              endIcon={
                 <Box
-                  display="flex"
-                  flexDirection={{ xs: "column", sm: "row" }}
-                  alignItems={{ xs: "stretched", sm: "center" }}
-                  justifyContent={"space-between"}
-                  width={1}
-                  marginBottom={2}
+                  component={"svg"}
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  width={24}
+                  height={24}
                 >
-                  <Box marginBottom={{ xs: 1, sm: 0 }}>
-                    <Typography variant={"subtitle2"}>
-                      Enter your password
-                    </Typography>
-                  </Box>
-                  <Typography variant={"subtitle2"}>
-                    <Link
-                      component={"a"}
-                      color={"primary"}
-                      href={"/password-reset-simple"}
-                      underline={"none"}
-                    >
-                      Forgot your password?
-                    </Link>
-                  </Typography>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </Box>
-                <TextField
-                  label="Password *"
-                  variant="outlined"
-                  name={"password"}
-                  type={"password"}
-                  fullWidth
-                  value={formik.values.password}
-                  onChange={formik.handleChange}
-                  error={
-                    formik.touched.password && Boolean(formik.errors.password)
-                  }
-                  helperText={formik.touched.password && formik.errors.password}
-                />
-              </Grid>
-              <Grid item container xs={12}>
-                <Box
-                  display="flex"
-                  flexDirection={{ xs: "column", sm: "row" }}
-                  alignItems={{ xs: "stretched", sm: "center" }}
-                  justifyContent={"space-between"}
-                  width={1}
-                  maxWidth={600}
-                  margin={"0 auto"}
-                >
-                  <Box marginBottom={{ xs: 1, sm: 0 }}>
-                    <Typography variant={"subtitle2"}>
-                      Don't have an account yet?{" "}
-                      <Link
-                        component={"a"}
-                        color={"primary"}
-                        href={"/signup-simple"}
-                        underline={"none"}
-                      >
-                        Sign up here.
-                      </Link>
-                    </Typography>
-                  </Box>
-                  <Button size={"large"} variant={"contained"} type={"submit"}>
-                    Login
-                  </Button>
-                </Box>
-              </Grid>
-            </Grid>
-          </form>
+              }
+            >
+              Login
+            </Button>
+          </Box>
         </Grid>
       </Grid>
     </Box>
@@ -174,3 +85,7 @@ const SidebarNewsletter = () => {
 };
 
 export default SidebarNewsletter;
+
+SidebarNewsletter.propTypes = {
+  name: PropTypes.func.isRequired,
+};

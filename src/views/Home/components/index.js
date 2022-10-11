@@ -1,7 +1,7 @@
 export { default as Welcome } from "./Welcome";
 export { default as Solutions } from "./Solutions";
 export { default as VideoSection } from "./VideoSection";
-export { default as Create } from "./Create";
+export { default as Explore } from "./Explore";
 export { default as Events } from "./Events";
 export { default as Insights } from "./Insights";
 export { default as Blog } from "./Blog";

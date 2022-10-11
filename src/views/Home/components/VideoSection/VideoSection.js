@@ -4,7 +4,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Login from "blocks/Login";
+import Button from "@mui/material/Button";
 
 const VideoSection = () => {
   const theme = useTheme();
@@ -45,6 +45,33 @@ const VideoSection = () => {
               loading times.
             </Typography>
           </Box>
+          {/* 
+          <Button
+            size={"large"}
+            sx={{ marginTop: 1, marginBottom: 2 }}
+            href={"#newsletter"}
+            endIcon={
+              <Box
+                component={"svg"}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                width={24}
+                height={24}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </Box>
+            }
+          >
+            Join our newsletter
+          </Button>
+          */}
           {/*
           <Box
             display="flex"

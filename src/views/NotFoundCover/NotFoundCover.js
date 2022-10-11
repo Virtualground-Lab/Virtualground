@@ -56,7 +56,7 @@ const NotFoundCover = () => {
                     Oops! Looks like you followed a bad link.
                     <br />
                     If you think this is a problem with us, please{" "}
-                    <Link href={""} underline="none">
+                    <Link href={"/contact-us"} underline="none">
                       tell us
                     </Link>
                   </Typography>
@@ -134,7 +134,7 @@ const NotFoundCover = () => {
                         component={LazyLoadImage}
                         effect="blur"
                         src={
-                          "https://assets.maccarianagency.com/backgrounds/img23.jpg"
+                          "https://firebasestorage.googleapis.com/v0/b/virtualground-meta.appspot.com/o/images%2Ferror.svg?alt=media&token=0ce88e26-9f5f-417c-a6f4-a1b98dfd691a"
                         }
                         height={{ xs: "auto", md: 1 }}
                         maxHeight={{ xs: 300, md: 1 }}

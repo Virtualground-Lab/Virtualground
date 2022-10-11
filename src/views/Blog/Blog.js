@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
-
 import Main from "layouts/Main";
 import Container from "components/Container";
 import {
@@ -17,18 +16,23 @@ import {
   SidebarNewsletter,
   Tags,
 } from "./components";
+import { WalletContext } from "blocks/Web3Auth/config";
 
 const BlogNewsroom = () => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
+  const { connected, login } = useContext(WalletContext);
 
   return (
     <Main colorInvert={true}>
       <Container>
         <PopularNews />
       </Container>
+
+      <Container></Container>
+      {/* 
       <Box bgcolor={"alternate.main"}>
         <Container>
           <FeaturedArticles />
@@ -52,18 +56,23 @@ const BlogNewsroom = () => {
             <Grid item xs={12} md={8}>
               <MostViewedArticles />
             </Grid>
-            <Grid item xs={12} md={4}>
-              <SidebarNewsletter />
-            </Grid>
+            {!connected && (
+              <Grid item xs={12} md={4}>
+                <SidebarNewsletter buttonFunc={login} />
+              </Grid>
+            )}
           </Grid>
         </Container>
       </Box>
       <Container maxWidth={800}>
         <Tags />
       </Container>
+   
       <Container maxWidth={800} paddingY={"0 !important"}>
         <Divider />
       </Container>
+            */}
+
       <Container>
         <FooterNewsletter />
       </Container>

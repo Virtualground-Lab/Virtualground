@@ -6,7 +6,7 @@ import Newsletter from "blocks/Newsletter";
 import Container from "components/Container";
 import { Welcome } from "./components";
 
-const Builder = () => {
+const Environment = () => {
   useEffect(() => {
     const jarallaxInit = async () => {
       const jarallaxElems = document.querySelectorAll(".jarallax");
@@ -72,4 +72,4 @@ const Builder = () => {
   );
 };
 
-export default Builder;
+export default Environment;
